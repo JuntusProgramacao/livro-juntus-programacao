@@ -1,0 +1,14 @@
+C:\Users\Gabriela\Documents\Livro\C#\C#\4 - estrutura-de-decisao\4.02\bin\Debug\net7.0\4.02.exe
+C:\Users\Gabriela\Documents\Livro\C#\C#\4 - estrutura-de-decisao\4.02\bin\Debug\net7.0\4.02.deps.json
+C:\Users\Gabriela\Documents\Livro\C#\C#\4 - estrutura-de-decisao\4.02\bin\Debug\net7.0\4.02.runtimeconfig.json
+C:\Users\Gabriela\Documents\Livro\C#\C#\4 - estrutura-de-decisao\4.02\bin\Debug\net7.0\4.02.dll
+C:\Users\Gabriela\Documents\Livro\C#\C#\4 - estrutura-de-decisao\4.02\bin\Debug\net7.0\4.02.pdb
+C:\Users\Gabriela\Documents\Livro\C#\C#\4 - estrutura-de-decisao\4.02\obj\Debug\net7.0\4.02.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Gabriela\Documents\Livro\C#\C#\4 - estrutura-de-decisao\4.02\obj\Debug\net7.0\4.02.AssemblyInfoInputs.cache
+C:\Users\Gabriela\Documents\Livro\C#\C#\4 - estrutura-de-decisao\4.02\obj\Debug\net7.0\4.02.AssemblyInfo.cs
+C:\Users\Gabriela\Documents\Livro\C#\C#\4 - estrutura-de-decisao\4.02\obj\Debug\net7.0\4.02.csproj.CoreCompileInputs.cache
+C:\Users\Gabriela\Documents\Livro\C#\C#\4 - estrutura-de-decisao\4.02\obj\Debug\net7.0\4.02.dll
+C:\Users\Gabriela\Documents\Livro\C#\C#\4 - estrutura-de-decisao\4.02\obj\Debug\net7.0\refint\4.02.dll
+C:\Users\Gabriela\Documents\Livro\C#\C#\4 - estrutura-de-decisao\4.02\obj\Debug\net7.0\4.02.pdb
+C:\Users\Gabriela\Documents\Livro\C#\C#\4 - estrutura-de-decisao\4.02\obj\Debug\net7.0\4.02.genruntimeconfig.cache
+C:\Users\Gabriela\Documents\Livro\C#\C#\4 - estrutura-de-decisao\4.02\obj\Debug\net7.0\ref\4.02.dll
