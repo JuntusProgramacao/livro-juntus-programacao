@@ -1,0 +1,14 @@
+C:\Users\Gabriela\Documents\Livro\C#\C#\3 - estrutura-sequencial\ex026\bin\Debug\net7.0\ex026.exe
+C:\Users\Gabriela\Documents\Livro\C#\C#\3 - estrutura-sequencial\ex026\bin\Debug\net7.0\ex026.deps.json
+C:\Users\Gabriela\Documents\Livro\C#\C#\3 - estrutura-sequencial\ex026\bin\Debug\net7.0\ex026.runtimeconfig.json
+C:\Users\Gabriela\Documents\Livro\C#\C#\3 - estrutura-sequencial\ex026\bin\Debug\net7.0\ex026.dll
+C:\Users\Gabriela\Documents\Livro\C#\C#\3 - estrutura-sequencial\ex026\bin\Debug\net7.0\ex026.pdb
+C:\Users\Gabriela\Documents\Livro\C#\C#\3 - estrutura-sequencial\ex026\obj\Debug\net7.0\ex026.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Gabriela\Documents\Livro\C#\C#\3 - estrutura-sequencial\ex026\obj\Debug\net7.0\ex026.AssemblyInfoInputs.cache
+C:\Users\Gabriela\Documents\Livro\C#\C#\3 - estrutura-sequencial\ex026\obj\Debug\net7.0\ex026.AssemblyInfo.cs
+C:\Users\Gabriela\Documents\Livro\C#\C#\3 - estrutura-sequencial\ex026\obj\Debug\net7.0\ex026.csproj.CoreCompileInputs.cache
+C:\Users\Gabriela\Documents\Livro\C#\C#\3 - estrutura-sequencial\ex026\obj\Debug\net7.0\ex026.dll
+C:\Users\Gabriela\Documents\Livro\C#\C#\3 - estrutura-sequencial\ex026\obj\Debug\net7.0\refint\ex026.dll
+C:\Users\Gabriela\Documents\Livro\C#\C#\3 - estrutura-sequencial\ex026\obj\Debug\net7.0\ex026.pdb
+C:\Users\Gabriela\Documents\Livro\C#\C#\3 - estrutura-sequencial\ex026\obj\Debug\net7.0\ex026.genruntimeconfig.cache
+C:\Users\Gabriela\Documents\Livro\C#\C#\3 - estrutura-sequencial\ex026\obj\Debug\net7.0\ref\ex026.dll
