@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 1</title>
+</head>
+<body>
+    <script>
+// Uma determinada universidade pretende desenvolver uma pesquisa através dos seus alunos matriculados. Para cada aluno será digitado um dos códigos 1,2 e 3 que significam: 
+
+// · 1 indica que o aluno cursa Administração 
+// · 2 indica que o aluno cursa Administração com gestão em Informática 
+// · 3 indica que o aluno cursa Sistemas de Informação.
+
+// Deseja-se saber a porcentagem e o número de alunos por curso. Considere um número indeterminado de alunos matriculados. 
+
+var contagemAdmin = 0
+var contagemAdminInformatica = 0
+var contagemSistemasInfo = 0
+
+while (true) {
+    var codigoCurso = prompt("Digite o código do curso (1 para Administração, 2 para Administração com gestão em Informática, 3 para Sistemas de Informação) ou digite '0' para encerrar")
+
+    if (codigoCurso === '0') {
+        break
+    }
+
+    codigoCurso = parseInt(codigoCurso)
+
+    switch (codigoCurso) {
+        case 1:
+            contagemAdmin++
+            break
+        case 2:
+            contagemAdminInformatica++
+            break
+        case 3:
+            contagemSistemasInfo++
+            break
+        default:
+            document.write("Código de curso inválido. Tente novamente" + "<br>")
+            continue
+    }
+}
+
+var totalAlunos = contagemAdmin + contagemAdminInformatica + contagemSistemasInfo
+
+const percentualAdmin = (contagemAdmin / totalAlunos) * 100
+const percentualAdminInformatica = (contagemAdminInformatica / totalAlunos) * 100
+const percentualSistemasInfo = (contagemSistemasInfo / totalAlunos) * 100
+
+document.write("Resultados da pesquisa" + "<br>");
+document.write("Total de alunos: " + totalAlunos + "<br>")
+document.write("Porcentagem de alunos em Administração: " + percentualAdmin.toFixed(2) + "%" + "<br>")
+document.write("Porcentagem de alunos em Administração com gestão em Informática: " + percentualAdminInformatica.toFixed(2) + "%" + "<br>")
+document.write("Porcentagem de alunos em Sistemas de Informação: " + percentualSistemasInfo.toFixed(2) + "%" + "<br>")
+
+
+    </script>
+</body>
+</html>

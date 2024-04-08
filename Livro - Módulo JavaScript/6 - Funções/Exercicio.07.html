@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 7</title>
+</head>
+<body>
+    <script>
+//Faça um programa que receba 3 números e mostre, utilizando funções: 
+// - Os números em ordem crescente 
+// - Os números em ordem decrescente 
+// - Os números pares 
+// - Os números ímpares 
+// - Os números maiores que 3 e menores que 10 
+
+function ordenarCrescente(a, b, c) {
+    return [a, b, c].sort((x, y) => x - y)
+  }
+
+  function ordenarDecrescente(a, b, c) {
+    return [a, b, c].sort((x, y) => y - x)
+  }
+
+  function numerosPares(a, b, c) {
+    return [a, b, c].filter(num => num % 2 === 0)
+  }
+
+  function numerosImpares(a, b, c) {
+    return [a, b, c].filter(num => num % 2 !== 0)
+  }
+
+  function numerosEntre3e10(a, b, c) {
+    return [a, b, c].filter(num => num > 3 && num < 10)
+  }
+
+  var numero1 = parseInt(prompt("Digite o primeiro número"))
+  var numero2 = parseInt(prompt("Digite o segundo número"))
+  var numero3 = parseInt(prompt("Digite o terceiro número"))
+
+  document.write('Números em Ordem Crescente');
+  document.write(ordenarCrescente(numero1, numero2, numero3).join(', ') + '<br>')
+
+  document.write('Números em Ordem Decrescente')
+  document.write(ordenarDecrescente(numero1, numero2, numero3).join(', ') + '<br>')
+
+  document.write('Números Pares')
+  document.write(numerosPares(numero1, numero2, numero3).join(', ') + '<br>')
+
+  document.write('Números Ímpares')
+  document.write(numerosImpares(numero1, numero2, numero3).join(', ') + '<br>')
+
+  document.write('Números entre 3 e 10')
+  document.write(numerosEntre3e10(numero1, numero2, numero3).join(', ') + '<br>')
+
+    </script>
+</body>
+</html>

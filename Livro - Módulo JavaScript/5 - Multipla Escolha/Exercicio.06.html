@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 6</title>
+</head>
+<body>
+    <script>
+//Repita o exercício anterior considerando que os menus sejam de uma lanchonete, e são os seguintes: 
+// - As bebidas e as quantidades vendidas 
+// - Os lanches e as quantidades vendidas 
+// - As porções e as quantidades consumidas 
+// No final do processamento (no final do cálculo de todas as contas das mesas) as seguintes informações devem ser impressas: 
+// a. A maior e a menor conta 
+// b. A média de gasto por mesa 
+// c. A média de gasto por pessoa 
+// d. A média de lanches consumidos por mesa 
+// e. A média de lanches consumidos por pessoas 
+// f. A média de porções consumidas por mesa 
+// g. O total de lanche e de porções 
+
+var maiorConta = 0
+var menorConta = Number.MAX_VALUE
+var totalGastos = 0
+var totalLanches = 0
+var totalPorcoes = 0
+var totalPessoas = 0
+var totalLanchesConsumidos = 0
+var totalPorcoesConsumidas = 0
+var numeroMesas = 0
+
+while (true) {
+    var numeroMesa = prompt("Digite o número da mesa (ou '0' para encerrar)")
+
+    if (numeroMesa === '0') {
+        break
+    }
+
+    numeroMesa = parseInt(numeroMesa)
+
+    var valorContaMesa = 0
+    var totalPessoasMesa = 0
+    var totalLanchesMesa = 0
+    var totalPorcoesMesa = 0
+
+    while (true) {
+        let opcaoMenu = prompt("Digite o código do item (1 para bebidas, 2 para lanches, 3 para porções, ou '0' para encerrar o pedido)")
+
+        if (opcaoMenu === '0') {
+            break
+        }
+
+        opcaoMenu = parseInt(opcaoMenu)
+
+        switch (opcaoMenu) {
+            case 1:
+                let bebida = prompt("Digite o nome da bebida")
+                let quantidadeBebida = parseInt(prompt("Digite a quantidade consumida"))
+                let precoBebida = parseFloat(prompt("Digite o preço da bebida"))
+
+                valorContaMesa += quantidadeBebida * precoBebida
+                break
+            case 2:
+                var lanche = prompt("Digite o nome do lanche")
+                var quantidadeLanches = parseInt(prompt("Digite a quantidade consumida"))
+                var precoLanche = parseFloat(prompt("Digite o preço do lanche"))
+
+                valorContaMesa += quantidadeLanches * precoLanche;
+                totalLanchesMesa += quantidadeLanches;
+                totalLanchesConsumidos += quantidadeLanches;
+                break
+            case 3:
+                let porcao = prompt("Digite o nome da porção")
+                let quantidadePorcoes = parseInt(prompt("Digite a quantidade consumida"))
+                let precoPorcao = parseFloat(prompt("Digite o preço da porção"))
+
+                valorContaMesa += quantidadePorcoes * precoPorcao
+                totalPorcoesMesa += quantidadePorcoes
+                totalPorcoesConsumidas += quantidadePorcoes
+                break
+            default:
+                document.write("Código de menu inválido. Tente novamente" + "<br>")
+                continue
+        }
+
+        totalPessoasMesa += quantidadeLanches
+    }
+
+    if (valorContaMesa > maiorConta) {
+        maiorConta = valorContaMesa
+    }
+    if (valorContaMesa < menorConta) {
+        menorConta = valorContaMesa
+    }
+    totalGastos += valorContaMesa
+    totalLanches += totalLanchesMesa
+    totalPorcoes += totalPorcoesMesa
+    totalPessoas += totalPessoasMesa
+
+    numeroMesas++
+}
+
+var mediaGastoPorMesa = totalGastos / numeroMesas
+var mediaGastoPorPessoa = totalGastos / totalPessoas
+var mediaLanchesPorMesa = totalLanches / numeroMesas
+var mediaLanchesPorPessoa = totalLanchesConsumidos / totalPessoas
+var mediaPorcoesPorMesa = totalPorcoes / numeroMesas
+
+document.write("Resultados da lanchonete" + "<br>")
+document.write("Maior conta: R$ " + maiorConta.toFixed(2) + "<br>")
+document.write("Menor conta: R$ " + menorConta.toFixed(2) + "<br>")
+document.write("Média de gasto por mesa: R$ " + mediaGastoPorMesa.toFixed(2) + "<br>")
+document.write("Média de gasto por pessoa: R$ " + mediaGastoPorPessoa.toFixed(2) + "<br>")
+document.write("Média de lanches consumidos por mesa: " + mediaLanchesPorMesa.toFixed(2) + "<br>")
+document.write("Média de lanches consumidos por pessoa: " + mediaLanchesPorPessoa.toFixed(2) + "<br>")
+document.write("Média de porções consumidas por mesa: " + mediaPorcoesPorMesa.toFixed(2) + "<br>")
+document.write("Total de lanches consumidos: " + totalLanchesConsumidos + "<br>")
+document.write("Total de porções consumidas: " + totalPorcoesConsumidas + "<br>")
+
+    </script>
+</body>
+</html>

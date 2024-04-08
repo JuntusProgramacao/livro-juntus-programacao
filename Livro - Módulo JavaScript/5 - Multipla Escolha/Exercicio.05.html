@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 5</title>
+</head>
+<body>
+    <script>
+// Faça um algoritmo para calcular a conta de um número indefinidos de mesas de uma pizzaria. Considere que o usuário possa informar através de um menu os seguintes itens: 
+// - As bebidas e as quantidades vendidas 
+// - As pizzas e as quantidades vendidas 
+// - As sobremesas e as quantidades vendidas 
+// No final do processamento (no final do cálculo de todas as contas das mesas) as seguintes informações devem ser impressas: 
+// a. A maior e a menor conta 
+// b. A média de gasto por mesa 
+// c. A média de gasto por pessoa 
+// d. A média de pizzas consumida por mesa 
+// e. A média de pedaços de pizzas consumidas por pessoas 
+// f. A média de cervejas consumidas por mesas 
+
+var maiorConta = 0
+var menorConta = Number.MAX_VALUE
+var totalGastos = 0
+var totalPizzas = 0
+var totalPessoas = 0
+var totalPedacosPizzas = 0
+var totalCervejas = 0
+var numeroMesas = 0
+
+while (true) {
+    let numeroMesa = prompt("Digite o número da mesa (ou '0' para encerrar)")
+
+    if (numeroMesa === '0') {
+        break
+    }
+
+    numeroMesa = parseInt(numeroMesa)
+
+    var valorContaMesa = 0
+    var totalPessoasMesa = 0
+    var totalPizzasMesa = 0
+    var totalPedacosPizzasMesa = 0
+    var totalCervejasMesa = 0
+
+    while (true) {
+        var opcaoMenu = prompt("Digite o código do item (1 para bebidas, 2 para pizzas, 3 para sobremesas, ou '0' para encerrar o pedido)")
+
+        if (opcaoMenu === '0') {
+            break
+        }
+
+        opcaoMenu = parseInt(opcaoMenu)
+
+        switch (opcaoMenu) {
+            case 1:
+                var bebida = prompt("Digite o nome da bebida")
+                var quantidadeBebida = parseInt(prompt("Digite a quantidade consumida"))
+                var precoBebida = parseFloat(prompt("Digite o preço da bebida"))
+
+                valorContaMesa += quantidadeBebida * precoBebida
+                totalCervejasMesa += (bebida.toLowerCase() === 'cerveja') ? quantidadeBebida : 0
+                break
+            case 2:
+                var pizza = prompt("Digite o nome da pizza")
+                var quantidadePizzas = parseInt(prompt("Digite a quantidade consumida"))
+                var slicesPorPizza = parseInt(prompt("Digite a quantidade de slices por pizza"))
+
+                valorContaMesa += quantidadePizzas * slicesPorPizza * 2.50
+                totalPizzasMesa += quantidadePizzas
+                totalPedacosPizzasMesa += quantidadePizzas * slicesPorPizza
+                break
+            case 3:
+                var sobremesa = prompt("Digite o nome da sobremesa:")
+                var quantidadeSobremesas = parseInt(prompt("Digite a quantidade consumida"))
+                var precoSobremesa = parseFloat(prompt("Digite o preço da sobremesa"))
+
+                valorContaMesa += quantidadeSobremesas * precoSobremesa
+                break
+            default:
+                alert("Código de menu inválido. Tente novamente")
+                continue
+        }
+
+        totalPessoasMesa += quantidadePizzas * slicesPorPizza
+    }
+
+    if (valorContaMesa > maiorConta) {
+        maiorConta = valorContaMesa
+    }
+    if (valorContaMesa < menorConta) {
+        menorConta = valorContaMesa
+    }
+    totalGastos += valorContaMesa
+    totalPizzas += totalPizzasMesa
+    totalPessoas += totalPessoasMesa
+    totalCervejas += totalCervejasMesa
+
+    numeroMesas++
+}
+
+var mediaGastoPorMesa = totalGastos / numeroMesas
+var mediaGastoPorPessoa = totalGastos / totalPessoas
+var mediaPizzasPorMesa = totalPizzas / numeroMesas
+var mediaPedacosPizzasPorPessoa = totalPedacosPizzas / totalPessoas
+var mediaCervejasPorMesa = totalCervejas / numeroMesas
+
+document.write("Resultados da pizzaria" + "<br>")
+document.write("Maior conta: R$ " + maiorConta.toFixed(2) + "<br>")
+document.write("Menor conta: R$ " + menorConta.toFixed(2) + "<br>")
+document.write("Média de gasto por mesa: R$ " + mediaGastoPorMesa.toFixed(2) + "<br>")
+document.write("Média de gasto por pessoa: R$ " + mediaGastoPorPessoa.toFixed(2) + "<br>")
+document.write("Média de pizzas consumidas por mesa: " + mediaPizzasPorMesa.toFixed(2) + "<br>")
+document.write("Média de pedaços de pizzas consumidos por pessoa: " + mediaPedacosPizzasPorPessoa.toFixed(2) + "<br>")
+document.write("Média de cervejas consumidas por mesa: " + mediaCervejasPorMesa.toFixed(2) + "<br>")
+    </script>
+</body>
+</html>

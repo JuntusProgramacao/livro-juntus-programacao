@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 3</title>
+</head>
+<body>
+    <script>
+//Você foi contratado pelo melhor time de futebol do mundo, para fazer um programa que: durante um jogo de futebol, leia um fato ocorrido no jogo, este fato pode ser : 
+// 0- Fim da partida 
+// 1- Faltas cometidas 
+// 2- Faltas recebidas 
+// 3- Escanteios a Favor 
+// 4- Passes Errados 
+// 5- Chutes a gol 
+// Ao final da partida o programa deverá imprimir os totais de cada fato.  
+
+var fimPartida = 0
+var faltasCometidas = 0
+var faltasRecebidas = 0
+var escanteiosAFavor = 0
+var passesErrados = 0
+var chutesAGol = 0
+
+while (fimPartida !== 1) {
+    var codigoFato = parseInt(prompt("Digite o código do fato ocorrido (0 a 5)"))
+
+    switch (codigoFato) {
+        case 0:
+            fimPartida = 1
+            break
+        case 1:
+            faltasCometidas++
+            break
+        case 2:
+            faltasRecebidas++
+            break
+        case 3:
+            escanteiosAFavor++
+            break
+        case 4:
+            passesErrados++
+            break
+        case 5:
+            chutesAGol++
+            break
+        default:
+            document.write("Código de fato inválido. Tente novamente.<br>")
+            continue
+    }
+}
+
+document.write("Resultados do jogo" + "<br>")
+document.write("Total de Fim de Partida: " + fimPartida + "<br>")
+document.write("Total de Faltas Cometidas: " + faltasCometidas + "<br>")
+document.write("Total de Faltas Recebidas: " + faltasRecebidas + "<br>")
+document.write("Total de Escanteios a Favor: " + escanteiosAFavor + "<br>")
+document.write("Total de Passes Errados: " + passesErrados + "<br>")
+document.write("Total de Chutes a Gol: " + chutesAGol + "<br>")
+
+    </script>
+</body>
+</html>

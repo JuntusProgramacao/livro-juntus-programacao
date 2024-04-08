@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//Escreva um programa para calcular o reajuste salarial dos empregados de uma empresa, de acordo com os seguintes critérios: 
+// a. Os funcionários com salário inferior a 1.000,00 devem ter um reajuste de 55%; 
+// b. Funcionários com salário de 1.000,00 (inclusive) a 2.500,00 (inclusive) devem ter um reajuste de 33%; 
+// c. Os funcionários com salário superior a 2.500,00 devem ter um reajuste de 20%; 
+// Crie uma função que receba o salário do funcionário e mostre o valor do reajuste. 
+
+function calcularReajuste(salario) {
+    var reajuste
+
+    if (salario < 1000) {
+      reajuste = salario * 0.55
+    } else if (salario <= 2500) {
+      reajuste = salario * 0.33
+    } else {
+      reajuste = salario * 0.2
+    }
+
+    return reajuste
+  }
+
+  var salarioFuncionario = parseFloat(prompt("Digite o salário do funcionário"))
+
+  document.write('Salário original: R$ ' + salarioFuncionario.toFixed(2) + '<br>')
+
+  var valorReajuste = calcularReajuste(salarioFuncionario);
+
+  document.write('Valor do reajuste: R$ ' + valorReajuste.toFixed(2) + '<br>')
+  document.write('Novo salário: R$ ' + (salarioFuncionario + valorReajuste).toFixed(2) + '<br>')
+
+    </script>
+</body>
+</html>

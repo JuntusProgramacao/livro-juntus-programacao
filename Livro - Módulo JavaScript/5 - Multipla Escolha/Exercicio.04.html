@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 4</title>
+</head>
+<body>
+    <script>
+// Faça um algoritmo para calcular a conta das mesas de uma lanchonete com base no consumo de seus clientes. Considere que o usuário pode escolher os seguintes itens do menu: 
+// 1 – lanches: 
+// X-Tudo R$ 4,00 
+// X-Bacon R$ 3,00 
+// X-Salada R$ 2,00 
+// 2 – Bebidas: 
+// Refrigerante R$ 1,50 
+// Cerveja R$ 1,80 
+// Água Mineral R$ 0,80
+// O programa deverá ler as quantidades dos itens e calcular o valor total da conta. Isso será realizado até que o usuário deseja sair do programa. No entanto, é necessário saber no final do processamento do cálculo das mesas, os valores da maior conta, menor conta e a média dos valores das contas das mesas. 
+
+var maiorConta = 0
+var menorConta = Number.MAX_VALUE
+var totalContas = 0
+var numeroMesas = 0
+
+while (true) {
+    var numeroMesa = prompt("Digite o número da mesa (ou '0' para encerrar)")
+
+    if (numeroMesa === '0') {
+        break
+    }
+
+    numeroMesa = parseInt(numeroMesa)
+    
+    var valorContaMesa = 0
+
+    while (true) {
+        let opcaoMenu = prompt("Digite o código do item (1 para lanches, 2 para bebidas, ou '0' para encerrar o pedido)")
+
+        if (opcaoMenu === '0') {
+            break
+        }
+
+        opcaoMenu = parseInt(opcaoMenu)
+
+        switch (opcaoMenu) {
+            case 1:
+                let lanche = prompt("Digite o código do lanche (1 para X-Tudo, 2 para X-Bacon, 3 para X-Salada)")
+                lanche = parseInt(lanche)
+                switch (lanche) {
+                    case 1:
+                        valorContaMesa += 4.00
+                        break
+                    case 2:
+                        valorContaMesa += 3.00
+                        break
+                    case 3:
+                        valorContaMesa += 2.00
+                        break
+                    default:
+                        document.write("Código de lanche inválido. Tente novamente" + "<br>")
+                        continue
+                }
+                break
+            case 2:
+                var bebida = prompt("Digite o código da bebida (1 para Refrigerante, 2 para Cerveja, 3 para Água Mineral)")
+                bebida = parseInt(bebida)
+                switch (bebida) {
+                    case 1:
+                        valorContaMesa += 1.50
+                        break
+                    case 2:
+                        valorContaMesa += 1.80
+                        break
+                    case 3:
+                        valorContaMesa += 0.80
+                        break
+                    default:
+                        document.write("Código de bebida inválido. Tente novamente" + "<br>")
+                        continue
+                }
+                break
+            default:
+                document.write("Código de menu inválido. Tente novamente" + "<br>")
+                continue
+        }
+    }
+
+    if (valorContaMesa > maiorConta) {
+        maiorConta = valorContaMesa
+    }
+    if (valorContaMesa < menorConta) {
+        menorConta = valorContaMesa
+    }
+    totalContas += valorContaMesa
+    numeroMesas++
+}
+
+var mediaContas = totalContas / numeroMesas
+
+document.write("Resultados da lanchonete:<br>")
+document.write("Maior conta: R$ " + maiorConta.toFixed(2) + "<br>")
+document.write("Menor conta: R$ " + menorConta.toFixed(2) + "<br>")
+document.write("Média das contas: R$ " + mediaContas.toFixed(2) + "<br>")
+
+    </script>
+</body>
+</html>

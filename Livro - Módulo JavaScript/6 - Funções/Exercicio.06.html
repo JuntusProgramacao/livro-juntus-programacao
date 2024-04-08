@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 6</title>
+</head>
+<body>
+    <script>
+// Crie uma tabela de conversão de polegada para centímetros. A tabela deve conter valores de 1 a 100 polegadas. Crie uma função para calcular o valor sabendo-se que cada polegada equivale a 2,54 cm
+
+function polegadaParaCm(polegadas) {
+    return polegadas * 2.54
+  }
+
+  document.write('<table border="1">')
+  document.write('<tr><th>Polegadas</th><th>Centímetros</th></tr>')
+
+  for (let i = 1; i <= 100; i++) {
+    const centimetros = polegadaParaCm(i)
+    document.write('<tr><td>' + i + '</td><td>' + centimetros.toFixed(2) + '</td></tr>')
+  }
+
+  document.write('</table>')
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 4</title>
+</head>
+<body>
+    <script>
+//Elabore um algoritmo para ler os números N e P, e calcule a exponenciação de NP utilizando uma função chamada expon( ... ) que você deverá criar
+
+function expon(base, expoente) {
+    return Math.pow(base, expoente)
+}
+
+var numeroN = parseInt(prompt("Digite o valor de N"))
+var numeroP = parseInt(prompt("Digite o valor de P"))
+
+if (isNaN(numeroN) || isNaN(numeroP)) {
+    document.write("Números inválidos. Programa encerrado")
+} else {
+    var resultadoExponenciacao = expon(numeroN, numeroP)
+    document.write("A exponenciação de " + numeroN + " elevado a " + numeroP + " é: " + resultadoExponenciacao + "<br>")
+}
+    </script>
+</body>
+</html>

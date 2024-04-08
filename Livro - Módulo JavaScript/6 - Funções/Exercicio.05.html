@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 5</title>
+</head>
+<body>
+    <script>
+// Faça um programa que receba o valor a ser depositado pelo usuário e a taxa de juros, crie uma função para calcular o rendimento e utilize-a para mostrar quanto o usuário terá depois da aplicação dos juros
+
+function calcularRendimento(valor, taxaJuros) {
+    return valor * (1 + taxaJuros / 100)
+}
+
+var valorDepositado = parseFloat(prompt("Digite o valor a ser depositado"))
+var taxaJuros = parseFloat(prompt("Digite a taxa de juros (%):"))
+
+if (isNaN(valorDepositado) || isNaN(taxaJuros)) {
+    document.write("Valores inválidos. Programa encerrado")
+} else {
+    var resultadoRendimento = calcularRendimento(valorDepositado, taxaJuros)
+    document.write("Após a aplicação dos juros, o valor será: R$ " + resultadoRendimento.toFixed(2) + "<br>")
+}
+
+    </script>
+</body>
+</html>

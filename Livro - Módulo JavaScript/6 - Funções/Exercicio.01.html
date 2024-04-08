@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 1</title>
+</head>
+<body>
+    <script>
+//Faça um programa que receba 5 números do tipo float maiores que zero, crie as seguintes funções: 
+// - boolean verificaNumero(int float) 
+// - void parImpar(int float) 
+// - float media(float n1, float n2, float n3, float n4, float n5) 
+// - float maior(float n1, float n2, float n3, float n4, float n5) 
+// - float menor(float n1, float n2, float n3, float n4, float n5) 
+// Ao solicitar cada número, verifique se o mesmo é valido através da função verificaNumero, depois mostre se o número é par ou impar utilizando a função parImpar. Ao final mostre a média dos números, qual é o número maior e qual é o número menor
+
+function verificaNumero(num) {
+    return num > 0
+}
+
+function parImpar(num) {
+    if (num % 2 === 0) {
+        document.write(num + " é par" + "<br>")
+    } else {
+        document.write(num + " é ímpar" + "<br>")
+    }
+}
+
+function media(n1, n2, n3, n4, n5) {
+    return (n1 + n2 + n3 + n4 + n5) / 5
+}
+
+function maior(n1, n2, n3, n4, n5) {
+    return Math.max(n1, n2, n3, n4, n5)
+}
+
+function menor(n1, n2, n3, n4, n5) {
+    return Math.min(n1, n2, n3, n4, n5)
+}
+
+var numeros = []
+for (var i = 1; i <= 5; i++) {
+    var numero = parseFloat(prompt("Informe o número " + i + ":"))
+
+    while (!verificaNumero(numero)) {
+        alert("Número inválido. Informe um número maior que zero.")
+        numero = parseFloat(prompt("Informe o número " + i))
+    }
+
+    parImpar(numero)
+
+    numeros.push(numero)
+}
+
+var mediaNumeros = media.apply(null, numeros)
+var maiorNumero = maior.apply(null, numeros)
+var menorNumero = menor.apply(null, numeros)
+
+document.write("Média dos números: " + mediaNumeros.toFixed(2) + "<br>")
+document.write("Maior número: " + maiorNumero.toFixed(2) + "<br>")
+document.write("Menor número: " + menorNumero.toFixed(2) + "<br>")
+
+    </script>
+</body>
+</html>

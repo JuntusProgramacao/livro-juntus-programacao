@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 3</title>
+</head>
+<body>
+    <script>
+// Faça um algoritmo para calcular o cubo e o quadrado de todos os números pertencentes a um intervalo, incluindo o limite superior e inferior (utilize uma função criada por você que retorne o valor do cubo e do quadrado do número)
+
+function calcularCuboQuadrado(numero) {
+    var cubo = Math.pow(numero, 3)
+    var quadrado = Math.pow(numero, 2)
+    return { cubo: cubo, quadrado: quadrado }
+}
+
+function calcularCuboQuadradoIntervalo(inicio, fim) {
+    document.write("Cubo e Quadrado dos Números no Intervalo [" + inicio + ", " + fim + "]" + "<br>")
+
+    for (var i = inicio; i <= fim; i++) {
+        var resultados = calcularCuboQuadrado(i)
+        document.write("Número: " + i + ", Cubo: " + resultados.cubo + ", Quadrado: " + resultados.quadrado + "<br>")
+    }
+}
+
+var limiteInferior = parseInt(prompt("Digite o limite inferior do intervalo:"))
+var limiteSuperior = parseInt(prompt("Digite o limite superior do intervalo:"))
+
+if (isNaN(limiteInferior) || isNaN(limiteSuperior) || limiteInferior > limiteSuperior) {
+    document.write("Intervalo inválido. Programa encerrado")
+} else {
+    calcularCuboQuadradoIntervalo(limiteInferior, limiteSuperior)
+}
+    </script>
+</body>
+</html>

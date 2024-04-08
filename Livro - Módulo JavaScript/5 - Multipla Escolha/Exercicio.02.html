@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 2</title>
+</head>
+<body>
+    <script>
+//Para eleição de representantes de classe de uma universidade há três candidatos. Os votos são informados através de código: 1,2 ou 3 (voto para os respectivos candidatos), 5 (voto nulo) e 6 (voto em branco). Faça um algoritmo que calcule e escreva: 
+// a. A porcentagem e o total de votos para cada candidato 
+// b. Total de votos nulos 
+// c. Total de votos em branco 
+// d. Percentual de votos em brancos e nulos 
+// e. Classificação dos candidatos 
+// f. Total de votos 
+
+var votosCandidato1 = 0
+var votosCandidato2 = 0
+var votosCandidato3 = 0
+var votosNulos = 0
+var votosBrancos = 0
+
+while (true) {
+    let codigoVoto = prompt("Digite o código do voto (1, 2, 3 para candidatos, 5 para voto nulo, 6 para voto em branco) ou digite '0' para encerrar")
+
+    if (codigoVoto === '0') {
+        break
+    }
+
+    codigoVoto = parseInt(codigoVoto)
+
+    switch (codigoVoto) {
+        case 1:
+            votosCandidato1++
+            break
+        case 2:
+            votosCandidato2++
+            break
+        case 3:
+            votosCandidato3++
+            break
+        case 5:
+            votosNulos++
+            break
+        case 6:
+            votosBrancos++
+            break
+        default:
+            document.write("Código de voto inválido. Tente novamente" + "<br>");
+            continue
+    }
+}
+
+var totalVotos = votosCandidato1 + votosCandidato2 + votosCandidato3 + votosNulos + votosBrancos
+
+var percentualCandidato1 = (votosCandidato1 / totalVotos) * 100
+var percentualCandidato2 = (votosCandidato2 / totalVotos) * 100
+var percentualCandidato3 = (votosCandidato3 / totalVotos) * 100
+var percentualNulos = (votosNulos / totalVotos) * 100
+var percentualBrancos = (votosBrancos / totalVotos) * 100
+
+document.write("Resultados da eleição" + "<br>")
+document.write("Total de votos para o Candidato 1: " + votosCandidato1 + " - " + percentualCandidato1.toFixed(2) + "%" + "<br>")
+document.write("Total de votos para o Candidato 2: " + votosCandidato2 + " - " + percentualCandidato2.toFixed(2) + "%" + "<br>")
+document.write("Total de votos para o Candidato 3: " + votosCandidato3 + " - " + percentualCandidato3.toFixed(2) + "%" + "<br>")
+document.write("Total de votos nulos: " + votosNulos + " - " + percentualNulos.toFixed(2) + "%" + "<br>")
+document.write("Total de votos em branco: " + votosBrancos + " - " + percentualBrancos.toFixed(2) + "%" + "<br>")
+document.write("Total de votos: " + totalVotos + "<br>" + "<br>")
+
+if (votosCandidato1 > votosCandidato2 && votosCandidato1 > votosCandidato3) {
+    document.write("Candidato 1 é o vencedor!" + "<br>")
+} else if (votosCandidato2 > votosCandidato1 && votosCandidato2 > votosCandidato3) {
+    document.write("Candidato 2 é o vencedor!" + "<br>")
+} else if (votosCandidato3 > votosCandidato1 && votosCandidato3 > votosCandidato2) {
+    document.write("Candidato 3 é o vencedor!" + "<br>")
+} else {
+    document.write("Empate entre os candidatos!" + "<br>")
+}
+    </script>
+</body>
+</html>

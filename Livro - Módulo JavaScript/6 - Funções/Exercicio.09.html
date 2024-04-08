@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 9</title>
+</head>
+<body>
+    <script>
+// Os salários dos empregados de uma empresa sofreram um aumento. Técnicos tiveram um aumento de 50%, gerentes de 30% e os demais de 10%. Faça um programa que calcule o salário reajustado para cada profissão. 
+
+function calcularReajuste(salario, percentual) {
+    return salario * (1 + percentual / 100)
+  }
+
+  var salarioTecnico = parseFloat(prompt("Digite o salário do técnico:"))
+  var salarioGerente = parseFloat(prompt("Digite o salário do gerente:"))
+  var salarioOutros = parseFloat(prompt("Digite o salário de outros funcionários:"))
+
+  document.write('Técnico' + "<br>")
+  document.write('Salário original: R$ ' + salarioTecnico.toFixed(2) + '<br>')
+  document.write('Salário reajustado: R$ ' + calcularReajuste(salarioTecnico, 50).toFixed(2) + '<br>')
+
+  document.write('Gerente' + "<br>")
+  document.write('Salário original: R$ ' + salarioGerente.toFixed(2) + '<br>')
+  document.write('Salário reajustado: R$ ' + calcularReajuste(salarioGerente, 30).toFixed(2) + '<br>')
+
+  document.write('Outros funcionários' + "<br>")
+  document.write('Salário original: R$ ' + salarioOutros.toFixed(2) + '<br>')
+  document.write('Salário reajustado: R$ ' + calcularReajuste(salarioOutros, 10).toFixed(2) + '<br>')
+  
+    </script>
+</body>
+</html>

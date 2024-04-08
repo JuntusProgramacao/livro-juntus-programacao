@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 7</title>
+</head>
+<body>
+    <script>
+//Agora desenvolva o algoritmo para informatizar o cálculo de uma churrascaria, considerando os menus: 
+// - Bebidas 
+// - Sobremesas 
+// No final do processamento (no final do cálculo de todas as contas das mesas) as seguintes informações devem ser impressas: 
+// a. A maior e a menor conta 
+// b. A média de gasto por mesa 
+// c. A média de gasto por pessoa 
+// d. A média de rodízios por mesa 
+
+var numeroMesas = parseInt(prompt("Informe o número de mesas"))
+var totalContas = 0
+var maiorConta = Number.MIN_VALUE
+var menorConta = Number.MAX_VALUE
+var totalRodizios = 0
+
+for (var i = 1; i <= numeroMesas; i++) {
+    var consumoBebidas = parseFloat(prompt("Informe o valor gasto em bebidas na mesa " + i))
+    var consumoSobremesas = parseFloat(prompt("Informe o valor gasto em sobremesas na mesa " + i))
+    var numeroPessoas = parseInt(prompt("Informe o número de pessoas na mesa " + i))
+    var numeroRodizios = parseInt(prompt("Informe o número de rodízios na mesa " + i))
+
+    var totalMesa = consumoBebidas + consumoSobremesas + (numeroRodizios * 25)
+
+    totalContas += totalMesa
+    totalRodizios += numeroRodizios
+
+    if (totalMesa > maiorConta) {
+        maiorConta = totalMesa
+    }
+    if (totalMesa < menorConta) {
+        menorConta = totalMesa
+    }
+}
+
+var mediaGastoMesa = totalContas / numeroMesas
+var mediaGastoPessoa = totalContas / totalRodizios
+var mediaRodiziosMesa = totalRodizios / numeroMesas
+
+document.write("Maior conta: R$" + maiorConta.toFixed(2) + "<br>")
+document.write("Menor conta: R$" + menorConta.toFixed(2) + "<br>")
+document.write("Média de gasto por mesa: R$" + mediaGastoMesa.toFixed(2) + "<br>")
+document.write(" Média de gasto por pessoa: R$" + mediaGastoPessoa.toFixed(2) + "<br>")
+document.write("Média de rodízios por mesa: " + mediaRodiziosMesa.toFixed(2) + "<br>")
+
+    </script>
+</body>
+</html>
