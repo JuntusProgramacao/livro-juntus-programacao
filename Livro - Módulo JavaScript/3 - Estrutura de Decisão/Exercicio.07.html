@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 7</title>
+</head>
+<body>
+    <script>
+        //Faça um algoritmo que receba duas notas de prova de um aluno e a média mínima para aprovação. Imprima a média final do aluno e informe se ele foi aprovado ou reprovado
+
+        var nota1 = parseFloat(prompt("Digite o valor da primeira nota"))
+        var nota2 = parseFloat(prompt("Digite o valor da segunda nota"))
+        var nota3 = parseFloat(prompt("Digite o valor da terceira nota"))
+
+        media = (nota1 + nota2 + nota3) / 3
+
+        document.write("Média obtida " + media + "<br>")
+
+        if(media >= 7){
+            document.write("Aluno aprovado!")
+        }else{
+            document.write("Aluno reprovado!")
+        }
+
+    </script>
+</body>
+</html>

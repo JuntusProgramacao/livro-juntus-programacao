@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 28</title>
+</head>
+<body>
+    <script>
+// Os salários dos empregados de uma empresa sofreram um aumento. Técnicos tiveram um aumento de 50%, gerentes de 30% e os demais de 10%. Faça um programa que calcule o salário reajustado para cada profissão
+
+var profissao = prompt("Digite a profissão do empregado (Técnico, Gerente ou Outros)")
+var salario = parseFloat(prompt("Digite o salário do empregado"))
+
+if(profissao == "Técnico"){
+var aumento = salario * 0.5
+}else if(profissao == "Gerente"){
+var aumento = salario * 0.3
+}else if(profissao == "Outros"){
+var aumento = salario * 0.1
+}else{
+    document.write("Digite uma profissão válida (Técnico, Gerente ou Outros)")
+}
+
+var NovoSalario = salario + aumento
+
+document.write("O novo salário do empregado é R$ " + NovoSalario)
+
+    </script>
+</body>
+</html>

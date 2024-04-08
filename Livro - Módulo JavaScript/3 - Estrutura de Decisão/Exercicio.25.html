@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 25</title>
+</head>
+<body>
+    <script>
+
+// Faça um algoritmo para ler três números e ordene-os em ordem decrescente
+
+var n1 = parseFloat(prompt("Digite o primeiro número"))
+var n2 = parseFloat(prompt("Digite o segundo número"))
+var n3 = parseFloat(prompt("Digite o terceiro número"))
+
+var menor = Math.min(n1, n2, n3)
+var maior = Math.max(n1, n2, n3)
+var meio = (n1 + n2 + n3) - menor - maior
+
+document.write("Os números em ordem decrescente são " + maior + " , " + meio + " e " + menor)
+
+    </script>
+</body>
+</html>

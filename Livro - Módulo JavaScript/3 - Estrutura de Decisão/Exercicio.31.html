@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 31</title>
+</head>
+<body>
+    <script>
+// Elaborar um programa que calcule a média ponderada de um aluno da disciplina de Algoritmo. Esta média tem pesos: 4 para a primeira prova e 3 para a segunda prova. Após calculada a média, uma mensagem deve ser apresentada informando a situação do aluno: APROVADO COM MÉDIA ou NECESSITA FAZER SUBSTITUTIVA. Caso o aluno necessite fazer prova substitutiva, o programa deve pedir esta nota e calcular a nova média do aluno. Uma nova mensagem da situação deve informar ALUNO COM MÉDIA ou ALUNO REPROVADO (leve em conta que a prova substitutiva pode substituir a primeira prova ou a segunda prova, portanto o programa deve verificar quando o aluno fica com maior média, isto é, quando a primeira prova é substituída pela prova substitutiva ou quando a segunda prova é substituída pela prova substitutiva) 
+
+
+function calcularMedia(NotaProva1, NotaProva2) {
+    var pesoProva1 = 4
+    var pesoProva2 = 3
+    var media = (NotaProva1 * pesoProva1 + NotaProva2 * pesoProva2) / (pesoProva1 + pesoProva2)
+    return media
+}
+function verificarSituacao(media) {
+    if (media >= 7) {
+        return "APROVADO COM MÉDIA"
+    } else {
+        return "NECESSITA FAZER SUBSTITUTIVA"
+    }
+}
+
+function verificarSituacaoSub(novaMedia) {
+    if (novaMedia >= 7) {
+        return "APROVADO COM SUBSTITUTIVA"
+    } else {
+        return "REPROVADO"
+    }
+}
+
+function main() {
+
+    var notaProva1 = parseFloat(prompt("Digite a nota da primeira prova"))
+    var notaProva2 = parseFloat(prompt("Digite a nota da segunda prova"))
+
+
+    var mediaInicial = calcularMedia(notaProva1, notaProva2)
+    document.write("Média inicial: " + mediaInicial + "<br>")
+
+    var situacaoInicial = verificarSituacao(mediaInicial)
+    document.write("Situação inicial: " + situacaoInicial + "<br>")
+
+    if (situacaoInicial === "NECESSITA FAZER SUBSTITUTIVA") {
+        var notaSubstitutiva = parseFloat(prompt("Digite a nota da prova substitutiva: "))
+
+        var novaMedia = calcularMedia(notaSubstitutiva, notaProva2)
+
+        var situacaoFinal = verificarSituacaoSub(novaMedia)
+        document.write("Nova média: " + novaMedia + "<br>")
+        document.write("Situação final: " + situacaoFinal)
+    }
+}
+main();
+    </script>
+</body>
+</html>

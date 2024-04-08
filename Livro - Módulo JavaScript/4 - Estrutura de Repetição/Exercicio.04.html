@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 4</title>
+</head>
+<body>
+    <script>
+    // Faça um algoritmo para imprimir os múltiplos de 5 em um intervalo informado pelo usuário.
+
+    var n1 = parseInt(prompt("Digite o número inferior"))
+var n2 = parseInt(prompt("Digite o número superior"))
+
+if(isNaN(n1) || isNaN(n2)){
+    document.write("Não foi possível completar a sua operação, pois o primeiro número era maior que o segundo")
+}else{
+    document.write("Múltiplos de 5" + "<br>" + "<br>")
+    for (var i = n1; i <= n2; i++){
+        if(i %5 == 0){
+            document.write(i + "<br>")
+        }
+    }
+}
+    </script>
+</body>
+</html>

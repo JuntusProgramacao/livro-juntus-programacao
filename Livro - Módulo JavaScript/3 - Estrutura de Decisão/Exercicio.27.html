@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 27</title>
+</head>
+<body>
+    <script>
+//Escreva um programa para calcular o reajuste salarial dos empregados de uma empresa, de acordo com os seguintes critérios:
+// a. Os funcionários com salário inferior a 1.000,00 devem ter um reajuste de 55%
+// b. Funcionários com salário de 1.000,00 (inclusive) a 2.500,00 (inclusive) devem ter um reajuste de 33%
+// c. Os funcionários com salário superior a 2.500,00 devem ter um reajuste de 20%
+
+var salario = parseFloat(prompt("Digite o valor do salário do funcionário"))
+
+if(salario < 1000.00){
+    reajuste = salario * 0.25
+}else if(salario <= 2500.00){
+    reajuste = salario * 0.33
+}else{
+    reajuste = salario * 0.20
+}
+
+var NovoSalario = salario + reajuste
+
+document.write("O novo salário do funcionário é R$ " + NovoSalario)
+
+    </script>
+</body>
+</html>

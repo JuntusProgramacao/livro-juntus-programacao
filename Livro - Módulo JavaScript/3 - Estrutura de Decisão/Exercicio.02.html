@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 2</title>
+</head>
+<body>
+    <script>
+        //O total de R$ 780.000,00 será dividido entre os três primeiros colocados de um concurso, em partes diretamente proporcionais aos pontos conseguidos por eles. Construa um programa que leia o número de pontos dos três primeiros colocados e imprima o valor recebido por cada um deles.
+    var ponto1 = parseFloat(prompt("Digite a quantidade de pontos do 1° colocado"))
+    var ponto2 = parseFloat(prompt("Digite a quantidade de pontos do 2° colocado"))
+    var ponto3 = parseFloat(prompt("Digite a quantidade de pontos do 3° colocado"))
+    var total = ponto1 + ponto2 + ponto3
+    var valor1 = (ponto1 / total) * 780000
+    var valor2 = (ponto2 / total) * 780000
+    var valor3 = (ponto3 / total) * 780000
+
+    document.write("Primeiro colocado R$" + valor1 + "<br>")
+    document.write("Segundo colocado R$" + valor2 + "<br>")
+    document.write("Terceiro colocado R$" + valor3)
+    </script>
+</body>
+</html>

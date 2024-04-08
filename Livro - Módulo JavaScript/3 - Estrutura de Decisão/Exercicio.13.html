@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 13</title>
+</head>
+<body>
+    <script>
+//         Faça um algoritmo para calcular, considerando que o usuário informe a idade (inteira), as seguintes informações: 
+
+// - Número de semestres; 
+// - Número de meses; 
+// - Número de semanas; 
+// - Número de dias; 
+// - Número de horas; 
+// - Número de minutos; 
+// - Número de segundos; 
+
+// No final deseja-se visualizar todos os cálculos realizados e exibir se o usuário é infantil, adolescente, jovem, adulto ou idoso. A tabela abaixo demonstra as idades que definem essas categorias
+
+// Idade 		Categoria 
+// Até 12 		Infantil 
+// 13 a 16 	Adolescente 
+// 17 a 20 	Jovem 
+// 21 a 50 	Adulto 
+// Acima de 50 	Idoso
+
+var idade = parseInt(prompt("Digite a idade"))
+var semestre = idade * 2
+var meses = idade * 12
+var semanas = idade * 52
+var dias = idade * 365
+var horas = dias * 24
+var minutos = horas * 60
+var segundos = minutos * 60
+
+if(idade <=12){
+    var categoria = "Infantil"
+}if(idade > 12 && idade <= 16){
+    var categoria = "Adolescente"
+}if(idade > 16 && idade <= 20){
+    var categoria = "Jovem"
+}if(idade > 20 && idade <= 50){
+    var categoria = "Adulto"
+}else{
+    var categoria = "Idoso"
+}
+
+document.write("Número de semestres " + semestre + "<br>")
+document.write("Número de meses " + meses + "<br>")
+document.write("Número de semanas " + semanas + "<br>")
+document.write("Número de dias " + dias + "<br>")
+document.write("Número de horas " + horas + "<br>")
+document.write("Número de minutos " + minutos + "<br>")
+document.write("Número de segundos " + segundos + "<br>")
+document.write("Categoria " + categoria)
+    </script>
+</body>
+</html>

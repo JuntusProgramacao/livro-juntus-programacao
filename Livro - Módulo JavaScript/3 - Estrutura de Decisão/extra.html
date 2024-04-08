@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício extra</title>
+</head>
+<body>
+    <script>
+// Dado três números digitados pelo usuário, e todos diferentes, imprima o maior número, o menor e o central. (Utilizando While)
+
+function ehDiferenteDosOutros(numero, outro1, outro2) {
+    return numero !== outro1 && numero !== outro2
+}
+
+function main() {
+    var num1, num2, num3
+
+    num1 = parseFloat(prompt("Digite o primeiro número:"))
+    num2 = parseFloat(prompt("Digite o segundo número (diferente do primeiro):"))
+    while (!ehDiferenteDosOutros(num2, num1, num1)) {
+        num2 = parseFloat(prompt("Digite o segundo número (diferente do primeiro):"))
+    }
+    num3 = parseFloat(prompt("Digite o terceiro número (diferente dos dois anteriores):"));
+    while (!ehDiferenteDosOutros(num3, num1, num2) || !ehDiferenteDosOutros(num3, num2, num1)) {
+        num3 = parseFloat(prompt("Digite o terceiro número (diferente dos dois anteriores):"))
+    }
+    var maior = Math.max(num1, num2, num3)
+    var menor = Math.min(num1, num2, num3)
+    var central = num1 + num2 + num3 - maior - menor
+
+    document.write("Maior número: " + maior + "<br>")
+    document.write("Menor número: " + menor + "<br>")
+    document.write("Número central: " + central)
+}
+main()
+    </script>
+</body>
+</html>

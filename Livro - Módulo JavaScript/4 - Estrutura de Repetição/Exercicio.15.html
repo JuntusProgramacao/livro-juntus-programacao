@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exerxíxio 15</title>
+</head>
+<body>
+    <script>
+// Faça um algoritmo para imprimir a quantidade de números ímpares entre um intervalo especificado pelo usuário
+
+var qtdNum = 0
+
+var nInferior = parseInt(prompt("Digite o número inferior"))
+var nSuperior = parseInt(prompt("Digite o número superior"))
+
+if(nSuperior <= nInferior){
+    document.write("Intervalo inválido")
+}else{
+    for(var i = nInferior; i <= nSuperior; i++){
+        if(i % 2 !== 0){
+            qtdNum++
+        }
+        
+    }
+    document.write(qtdNum)
+}
+    </script>
+</body>
+</html>

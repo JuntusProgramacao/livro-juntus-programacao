@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 23</title>
+</head>
+<body>
+    <script>
+// Faça um programa que calcule a soma dos números pares e ímpares a partir de um valor inicial e final informados pelos usuários. Por exemplo, se usuário informou 120 e 130, o programa deverá calculara soma dos números pares: 120 + 122 + 124 + 126 +128 + 130, além dos números ímpares: 121 + 123 + 125 + 127 + 129
+
+function calcularSoma() {
+    var valorInicial = parseInt(prompt("Informe o valor inicial:"))
+    var valorFinal = parseInt(prompt("Informe o valor final:"))
+
+    if (isNaN(valorInicial) || isNaN(valorFinal)) {
+        console.log("Por favor, insira valores numéricos válidos.")
+        return
+    }
+
+    var somaPares = 0
+    var somaImpares = 0
+
+    for (var i = valorInicial; i <= valorFinal; i++) {
+        if (i % 2 === 0) {
+            somaPares += i
+        } else {
+            somaImpares += i
+        }
+    }
+
+    document.write(`Soma dos números pares: ${somaPares}` + `<br>`)
+    document.write(`Soma dos números ímpares: ${somaImpares}`)
+}
+
+calcularSoma()
+
+
+    </script>
+</body>
+</html>

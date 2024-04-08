@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 28</title>
+</head>
+<body>
+    <script>
+// Faça um algoritmo para imprimir uma tabela de conversão entre Dólar e Real. A cotação de um Dólar em real deve ser fornecida pelo usuário. A tabela deve conter até 1000 Dólares
+
+function gerarTabelaConversao() {
+    const cotacaoDolar = parseFloat(prompt("Informe a cotação do Dólar em Reais:"));
+
+    if (isNaN(cotacaoDolar) || cotacaoDolar <= 0) {
+        document.write("Por favor, informe uma cotação de Dólar válida.");
+        return;
+    }
+
+    document.write("<style>");
+    document.write("table { width: 50%; margin: auto; text-align: center; }");
+    document.write("th, td { padding: 10px; }");
+    document.write("</style>");
+
+    document.write("<table border='1'>");
+    document.write("<tr><th>Dólares</th><th>Reais</th></tr>");
+
+    for (let dolar = 1; dolar <= 1000; dolar++) {
+        const reais = dolar * cotacaoDolar;
+
+        document.write(`<tr><td>${dolar}</td><td>${reais.toFixed(2)}</td></tr>`);
+    }
+
+    document.write("</table>");
+}
+
+gerarTabelaConversao();
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecercício 20</title>
+</head>
+<body>
+    <script>
+// Dado três números digitados pelo usuário, e todos diferentes, imprima o maior número
+
+var n1 = parseInt(prompt("Digite o número 1"))
+var n2 = parseInt(prompt("Digite o número 2"))
+var n3 = parseInt(prompt("Digite o número 3"))
+
+if (n1 === n2 || n1 === n3 || n2 === n3){
+document.write("Os números são iguais para de palhaçada")
+}else {
+var maiorNum = Math.max(n1, n2, n3)
+
+document.write("O maior número é " + maiorNum)
+}
+
+    </script>
+</body>
+</html>

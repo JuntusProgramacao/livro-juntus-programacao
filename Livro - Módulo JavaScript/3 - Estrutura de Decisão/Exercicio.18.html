@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 18</title>
+</head>
+<body>
+    <script>
+//         Um comerciante está necessitando saber qual é o lucro de cada mercadoria vendida em sua loja. Para isso, está necessitando de um programa que permite informar o valor de custo e de venda de um produto, e imprima uma mensagem considerando a tabela a seguir: (L2 – ex.16)
+//  Lucro 	Mensagens 
+//  Inferior a 10% 	“Lucro baixo” 
+//  Entre 10% e 20% 	“Lucro médio” 
+//  Acima de 20% 	“Lucro alto” 
+
+var valorCusto = parseFloat(prompt("Digite o valor de custo de produto"))
+var valorVenda = parseFloat(prompt("Digite o valor de venda do produto"))
+
+var LucroPercentual = ((valorVenda - valorCusto) / valorCusto) * 100
+
+if(LucroPercentual < 10){
+    mensagem = "Baixo Lucro"
+}
+if(LucroPercentual >= 10 && LucroPercentual <= 20){
+    mensagem = "Lucro Médio"
+}
+if(LucroPercentual > 20){
+    mensagem = "Lucro Alto"
+}
+
+document.write("Mensagem " + mensagem)
+
+    </script>
+</body>
+</html>

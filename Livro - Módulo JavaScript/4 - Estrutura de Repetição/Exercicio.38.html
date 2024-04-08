@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 38</title>
+</head>
+<body>
+    <script>
+// Um Frigorífico possui 500 bois, e deseja saber o número de boi que possui o peso mais gordo e do boi que possui o peso mais magro e média de pesos dos bois. Cada boi possui um número de identificação. Faça o mesmo programa utilizando while, for e do...while. Observação: se houver dois bois ou mais bois com o peso maior ou menor peso, o programa deverá informar o usuário no final da execução. 
+
+var totalBois = 500
+var numeroBoi = 1
+var pesoMaisGordo = 0
+var pesoMaisMagro = Infinity
+var somaPesos = 0
+
+    do {
+      var pesoBoi = parseFloat(prompt("Digite o peso do boi #" + numeroBoi + " em kg:"))
+
+      if (isNaN(pesoBoi)) {
+        alert("Entrada inválida. Por favor, digite um número.")
+        continue
+      }
+
+      if (pesoBoi > pesoMaisGordo) {
+        pesoMaisGordo = pesoBoi
+        var boiMaisGordo = numeroBoi
+      }
+
+      if (pesoBoi < pesoMaisMagro) {
+        pesoMaisMagro = pesoBoi
+        var boiMaisMagro = numeroBoi
+      }
+
+      somaPesos += pesoBoi
+
+      numeroBoi++
+    } while (numeroBoi <= totalBois)
+
+    var mediaPesos = somaPesos / totalBois
+
+    document.write("Boi mais gordo" + "<br>")
+    document.write("Número do boi: " + boiMaisGordo + "<br>")
+    document.write("Peso: " + pesoMaisGordo + " kg" + "<br>")
+
+    document.write("<>Boi mais magro" + "<br>")
+    document.write("<>Número do boi: " + boiMaisMagro + "<br>")
+    document.write("<p>Peso: " + pesoMaisMagro + " kg" + "<br>")
+
+    document.write("Média de pesos dos bois: " + mediaPesos.toFixed(2) + " kg" + "<br>")
+
+    </script>
+</body>
+</html>

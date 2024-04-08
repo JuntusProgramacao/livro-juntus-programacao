@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 12</title>
+</head>
+<body>
+    <script>
+// Faça um algoritmo para calcular a média de n números informados pelo usuário. Para sair do cálculo, o usuário deverá digitar um número negativo
+
+function calcularMedia(numeros) {
+    var soma = 0
+
+    for (var i = 0; i < numeros.length; i++) {
+        soma += numeros[i]
+    }
+
+    var media = numeros.length > 0 ? soma / numeros.length : 0;
+
+    return media
+}
+
+var numeros = []
+
+
+var numero
+do {
+    numero = parseFloat(prompt("Digite um número (digite um número negativo para encerrar):"))
+
+    if (numero >= 0 || isNaN(numero)) {
+        numeros.push(numero)
+    }
+} while (numero >= 0)
+
+var media = calcularMedia(numeros)
+
+document.write("Resultado:" + "<br>")
+document.write("Números informados: " + numeros.join(", ") + "<br>")
+document.write("Média: " + media + "<br>")
+
+    </script>
+</body>
+</html>

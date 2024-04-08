@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 30</title>
+</head>
+<body>
+    <script>
+
+// Crie um algoritmo para imprimir todas as tabuadas do 1 até o 10
+
+function tabuada() {
+    document.write("Tabuadas do 1 até o 10")
+
+    for (var multiplicador = 1; multiplicador <= 10; multiplicador++) {
+        document.write("Tabuada do " + multiplicador)
+        document.write("<ul>")
+            
+        for (var multiplicando = 1; multiplicando <= 10;multiplicando++) {
+            var resultado = multiplicador * multiplicando
+            document.write("<li>" + multiplicador + " x " + multiplicando + " = " + resultado + "</li>")
+        }
+
+        document.write("</ul>")
+    }
+}
+
+tabuada()
+
+    </script>
+</body>
+</html>

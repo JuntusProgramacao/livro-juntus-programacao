@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exerxíxio 19</title>
+</head>
+<body>
+    <script>
+// Construir um programa que calcule a soma dos N primeiros números inteiros, onde N será digitado pelo usuário. Por exemplo, soma = 1 + 2 + 3 + 4 + ..... + N
+
+var n = parseInt(prompt("Digite um número inteiro positivo"))
+
+var soma = 0
+
+if(n < 1){
+    document.write("Por favor, digite um número inteiro positivo")
+}else{
+    for(i = 1; i <= n; i++){
+        soma += i
+    }
+    document.write(`A soma dos ${n} primeiros números inteiros é ${soma}`)
+}
+    </script>
+</body>
+</html>

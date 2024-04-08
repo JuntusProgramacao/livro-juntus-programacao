@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 33</title>
+</head>
+<body>
+    <script>
+// Faça um algoritmo para ler um número até que o usuário deseja terminar a entrada dos dados e, receber as seguintes informações: a média dos números, o maior e o menor número. 
+
+var numeros = []
+    var continuar = true
+
+    while (continuar) {
+      var numero = parseFloat(prompt("Digite um número (ou clique em Cancelar para encerrar)"))
+
+      if (isNaN(numero) || numero === null) {
+        continuar = false
+      } else {
+
+        numeros.push(numero)
+      }
+    }
+
+    if (numeros.length < 2) {
+      document.write("É necessário fornecer pelo menos dois números para análise")
+    } else {
+      var soma = 0
+      var maior = numeros[0]
+      var menor = numeros[0]
+
+      for (var i = 0; i < numeros.length; i++) {
+        soma += numeros[i]
+
+        if (numeros[i] > maior) {
+          maior = numeros[i]
+        }
+
+        if (numeros[i] < menor) {
+          menor = numeros[i]
+        }
+      }
+
+      var media = soma / numeros.length
+
+      document.write("Análise de Números<br>")
+      document.write("Números digitados: " + numeros.join(", ") + "<br>")
+      document.write("Média dos números: " + media.toFixed(2) + "<br>")
+      document.write("Maior número: " + maior + "<br>")
+      document.write("Menor número: " + menor + "<br>")
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 21</title>
+</head>
+<body>
+    <script>
+//Faça um programa que calcule e escreva o valor de S. 
+//          1        3        5              99 
+// S = -------- + ------- + ------- + ... + ----- 
+//         1         2         3              50 
+
+var S = 0.0
+
+for (var numerador = 1; numerador < 100; numerador += 2) {
+    var divisor = Math.floor(numerador / 2) + 1
+    var termo = numerador / divisor
+    S += termo
+}
+
+document.write(`O valor de S é igual a ${S}.`)
+
+    </script>
+</body>
+</html>

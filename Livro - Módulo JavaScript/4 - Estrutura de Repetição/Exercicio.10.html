@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 10</title>
+</head>
+<body>
+    <script>
+// Faça um algoritmo para um intervalo de números informados pelo usuário e calcular, para cada número, a raiz quadrada e sua metade
+
+function calcularRaizQuadrada(numero) {
+    return Math.sqrt(numero)
+}
+
+function calcularMetade(numero) {
+    return numero / 2
+}
+
+function calcularRaizQuadradaEMetadeNoIntervalo(limiteInferior, limiteSuperior) {
+    document.write("Resultados:")
+
+    for (var i = limiteInferior; i <= limiteSuperior; i++) {
+        var raizQuadrada = calcularRaizQuadrada(i)
+        var metade = calcularMetade(i)
+
+        document.write("Número: " + i + "<br>")
+        document.write("Raiz Quadrada: " + raizQuadrada + "<br>")
+        document.write("Metade: " + metade + "<br>")
+        document.write("<br>")
+    }
+}
+
+var limiteInferior = parseFloat(prompt("Digite o limite inferior do intervalo:"))
+var limiteSuperior = parseFloat(prompt("Digite o limite superior do intervalo:"))
+
+calcularRaizQuadradaEMetadeNoIntervalo(limiteInferior, limiteSuperior)
+
+    </script>
+</body>
+</html>

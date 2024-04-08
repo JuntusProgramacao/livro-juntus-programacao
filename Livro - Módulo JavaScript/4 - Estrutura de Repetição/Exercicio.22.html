@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 22</title>
+</head>
+<body>
+    <script>
+// Faça um programa para escrever os números primos até um número informado pelo usuário. 
+
+function ePrimo(num) {
+    if (num <= 1) {
+        return false
+    }
+    for (var i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i === 0) {
+            return false
+        }
+    }
+    return true
+}
+
+function listarPrimos() {
+    var limite = parseInt(prompt("Informe um número limite"))
+
+    if (isNaN(limite)) {
+        document.write("Por favor, insira um número válido.")
+        return
+    }
+
+    document.write(`Números primos até ${limite} ` + `<br>`);
+
+    for (let i = 2; i <= limite; i++) {
+        if (ePrimo(i)) {
+            document.write(i + "<br>")
+        }
+    }
+}
+
+listarPrimos();
+
+    </script>
+</body>
+</html>

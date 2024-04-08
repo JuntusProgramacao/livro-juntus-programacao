@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercio 31</title>
+</head>
+<body>
+    <script>
+// Suponha que serão digitados 100 números inteiros via teclado, faça um algoritmo para: 
+// · Somar os números positivos 
+// · Contar os números negativos. 
+// · A média dos números negativos e a média dos números positivos. 
+// · A diferença entre o total de números positivos e negativos
+
+function operacoesComNumeros() {
+    var totalNumeros = 100
+    var somaPositivos = 0
+    var contagemNegativos = 0
+    var somaNegativos = 0
+
+    for (var i = 1; i <= totalNumeros; i++) {
+        var numero = parseInt(prompt("Digite o número " + i))
+
+        if (isNaN(numero)) {
+            document.write("Por favor, insira um número válido")
+            return
+        }
+
+        if (numero > 0) {
+            somaPositivos += numero
+        } else if (numero < 0) {
+            contagemNegativos++
+            somaNegativos += numero
+        }
+    }
+
+    var mediaPositivos = somaPositivos / (totalNumeros - contagemNegativos)
+    var mediaNegativos = contagemNegativos > 0 ? somaNegativos / contagemNegativos : 0
+
+    document.write("Soma dos números positivos: " + somaPositivos + "<br>")
+    document.write("Contagem dos números negativos: " + contagemNegativos + "<br>")
+    document.write("Média dos números positivos: " + mediaPositivos + "<br>")
+    document.write("Média dos números negativos: " + mediaNegativos + "<br>")
+    document.write("Diferença entre o total de números positivos e negativos: " + (totalNumeros - contagemNegativos) + "<br>")
+}
+
+operacoesComNumeros()
+
+
+    </script>
+</body>
+</html>

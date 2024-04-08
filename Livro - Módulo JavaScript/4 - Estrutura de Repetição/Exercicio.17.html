@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exerxíxio 17</title>
+</head>
+<body>
+    <script>
+//   Desenvolva um algoritmo para calcular o fatorial de um número. Por exemplo: 0! = 1, 1! = 1 e 5!= 5x4x3x2x1 = 120. Lembre-se, não existe fatorial de número negativo e de número real.
+
+function calcularFatorial(numero) {
+
+  if (numero < 0 || !Number.isInteger(numero)) {
+    return "Fatorial não definido para números negativos ou não inteiros"
+  }
+
+  if (numero === 0) {
+    return 1
+  }
+
+  var fatorial = 1
+
+  for (var i = 1; i <= numero; i++) {
+    fatorial *= i
+  }
+
+  return fatorial
+}
+
+var numero = parseInt(prompt("Digite um número para calcular o fatorial:"));
+var resultado = calcularFatorial(numero);
+
+document.write(`O fatorial de ${numero} é: ${resultado}`);
+
+    </script>
+</body>
+</html>

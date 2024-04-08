@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 26</title>
+</head>
+<body>
+    <script>
+// Faça um programa para ler 3 números reais e imprimi-los em ordem crescente. Se os números forem iguais, o cálculo o programa não deve ordená-los
+
+var n1 = parseFloat(prompt("Digite o primeiro número"))
+var n2 = parseFloat(prompt("Digite o segundo número"))
+var n3 = parseFloat(prompt("Digite o terceiro número"))
+
+if(n1 == n2 || n2 == n3){
+document.write("Os números são iguais " + n1 + " , " + n2 + " e " + n3)}
+else{
+    var menor = Math.min(n1, n2, n3)
+    var maior = Math.max(n1, n2, n3)
+    var meio = (n1 + n2 + n3) - menor - maior
+
+    document.write("Os números em ordem crescente são " + menor + " , " + meio + " e " + maior)
+}
+
+
+    </script>
+</body>
+</html>

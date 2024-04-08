@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 11</title>
+</head>
+<body>
+    <script>
+// Faça um algoritmo para ler 100 números, calcular a soma dos números, a média e o maior e menor número encontrados
+
+function calcularEExibirEstatisticas(numeros) {
+    var soma = 0
+    var maior = -Infinity
+    var menor = Infinity
+
+    for (var i = 0; i < numeros.length; i++) {
+        var numero = parseFloat(numeros[i]);
+
+        soma += numero
+
+        if (numero > maior) {
+            maior = numero
+        }
+
+        if (numero < menor) {
+            menor = numero
+        }
+    }
+
+    var media = soma / numeros.length
+
+    document.write("Resultados" + "<br>")
+    document.write("Soma: " + soma + "<br>")
+    document.write("Média: " + media + "<br>")
+    document.write("Maior Número: " + maior + "<br>")
+    document.write("Menor Número: " + menor + "<br>")
+}
+
+var numeros = []
+
+for (var i = 0; i < 100; i++) {
+    var numero = parseFloat(prompt("Digite o " + (i + 1) + "º número:"))
+    numeros.push(numero)
+}
+
+calcularEExibirEstatisticas(numeros)
+
+    </script>
+</body>
+</html>

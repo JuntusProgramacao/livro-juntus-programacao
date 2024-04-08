@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 29</title>
+</head>
+<body>
+    <script>
+
+// Serão lidos N números, faça um algoritmo que escreva o maior e o menor valor informado
+
+function encontrarMaiorMenor() {
+    var quantidadeNumeros = parseInt(prompt("Digite a quantidade de números a serem inseridos:"))
+
+    if (isNaN(quantidadeNumeros) || quantidadeNumeros <= 0) {
+        document.write("Por favor, insira um número válido para a quantidade.")
+        return
+    }
+
+    var maiorValor = Number.MIN_VALUE
+    var menorValor = Number.MAX_VALUE
+
+    for (var i = 1; i <= quantidadeNumeros; i++) {
+        var numero = parseFloat(prompt("Digite o número " + i + ":"))
+
+        if (isNaN(numero)) {
+            document.write("Por favor, insira um número válido.")
+            return
+        }
+
+        maiorValor = Math.max(maiorValor, numero)
+        menorValor = Math.min(menorValor, numero)
+    }
+
+    document.write("O maior valor é: " + maiorValor + "<br>")
+    document.write("O menor valor é: " + menorValor)
+}
+encontrarMaiorMenor()
+
+    </script>
+</body>
+</html>

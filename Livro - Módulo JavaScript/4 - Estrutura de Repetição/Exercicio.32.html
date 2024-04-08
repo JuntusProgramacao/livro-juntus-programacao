@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 32</title>
+</head>
+<body>
+    <script>
+//Uma empresa está fazendo análise de uma determinada população. Os seguintes dados são obtidos das pessoas: 
+// a. Idade 
+// b. Cor de Cabelos (Castanhos, Pretos, Loiros ou Outro) 
+// c. Altura 
+// d. Peso 
+// e. Sexo (Masculino ou Feminino)
+ 
+//Faça um algoritmo para mostrar, ao final do processamento os seguintes dados: 
+// a. Quantas pessoas possuem idade superior a 18 anos 
+// b. Qual é a média das idades, a idade da pessoa mais idosa e a idade da pessoa mais jovem? 
+// c. Quantas pessoas em porcentagem possuem cabelos castanhos, pretos, loiros e outros? 
+// d. Quantas pessoas possuem altura superior a 1,70 m 
+// e. Quantas pessoas peso superior a 80 kg. 
+// f. Quantas pessoas em porcentagem são do sexo masculino e quantas são do sexo feminino.
+
+    var totalPessoas = prompt("Quantas pessoas serão analisadas?")
+    var pessoasMaiores18 = 0
+    var somaIdades = 0
+    var idadeMaisVelha = 0
+    var idadeMaisJovem = Infinity
+    var cabelosCastanhos = 0
+    var cabelosPretos = 0
+    var cabelosLoiros = 0
+    var cabelosOutros = 0
+    var alturaSuperior170 = 0
+    var pesoSuperior80 = 0
+    var sexoMasculino = 0
+    var sexoFeminino = 0
+
+    for (var i = 1; i <= totalPessoas; i++) {
+      document.write("Pessoa " + i + "<br>");
+
+      var idade = parseInt(prompt("Informe a idade da pessoa " + i))
+      var corCabelo = prompt("Informe a cor de cabelo da pessoa " + i + " (Castanhos, Pretos, Loiros ou Outro)").toLowerCase()
+      var altura = parseFloat(prompt("Informe a altura (em metros) da pessoa " + i))
+      var peso = parseFloat(prompt("Informe o peso (em kg) da pessoa " + i))
+      var sexo = prompt("Informe o sexo da pessoa " + i + " (Masculino ou Feminino)").toLowerCase()
+
+      if (idade > 18) {
+        pessoasMaiores18++
+      }
+
+      somaIdades += idade
+      if (idade > idadeMaisVelha) {
+        idadeMaisVelha = idade
+      }
+      if (idade < idadeMaisJovem) {
+        idadeMaisJovem = idade
+      }
+
+      switch (corCabelo) {
+        case "castanhos":
+          cabelosCastanhos++
+          break;
+        case "pretos":
+          cabelosPretos++
+          break;
+        case "loiros":
+          cabelosLoiros++
+          break;
+        default:
+          cabelosOutros++
+          break;
+      }
+
+      if (altura > 1.7) {
+        alturaSuperior170++
+      }
+
+      if (peso > 80) {
+        pesoSuperior80++
+      }
+
+      if (sexo === "masculino") {
+        sexoMasculino++
+      } else if (sexo === "feminino") {
+        sexoFeminino++
+      }
+    }
+
+    var mediaIdades = somaIdades / totalPessoas
+
+    var porcentagemCabelosCastanhos = (cabelosCastanhos / totalPessoas) * 100
+    var porcentagemCabelosPretos = (cabelosPretos / totalPessoas) * 100
+    var porcentagemCabelosLoiros = (cabelosLoiros / totalPessoas) * 100
+    var porcentagemCabelosOutros = (cabelosOutros / totalPessoas) * 100
+    var porcentagemSexoMasculino = (sexoMasculino / totalPessoas) * 100
+    var porcentagemSexoFeminino = (sexoFeminino / totalPessoas) * 100
+
+    document.write("Resultados" + "<br>")
+    document.write("Pessoas com idade superior a 18 anos: " + pessoasMaiores18 + "<br>")
+    document.write("Média das idades: " + mediaIdades.toFixed(2) + " anos" + "<br>")
+    document.write("Pessoa mais velha: " + idadeMaisVelha + " anos" + "<br>")
+    document.write("Pessoa mais jovem: " + idadeMaisJovem + " anos" + "<br>")
+    document.write("Porcentagem de pessoas com cabelos castanhos: " + porcentagemCabelosCastanhos.toFixed(2) + "%" + "<br>")
+    document.write("Porcentagem de pessoas com cabelos pretos: " + porcentagemCabelosPretos.toFixed(2) + "%" + "<br>")
+    document.write("Porcentagem de pessoas com cabelos loiros: " + porcentagemCabelosLoiros.toFixed(2) + "%" + "<br>")
+    document.write("Porcentagem de pessoas com cabelos de outras cores: " + porcentagemCabelosOutros.toFixed(2) + "%" + "<br>")
+    document.write("Pessoas com altura superior a 1,70 m: " + alturaSuperior170 + "<br>")
+    document.write("Pessoas com peso superior a 80 kg: " + pesoSuperior80 + "<br>")
+    document.write("Porcentagem de pessoas do sexo masculino: " + porcentagemSexoMasculino.toFixed(2) + "%" + "<br>")
+    document.write("Porcentagem de pessoas do sexo feminino: " + porcentagemSexoFeminino.toFixed(2) + "%" + "<br>")
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 29</title>
+</head>
+<body>
+    <script>
+// Suponha que um caixa disponha apenas notas de R$100, R$10 e R$1. Considerando que alguém está pagando uma compra, faça um programa para determinar o número mínimo de notas que o caixa deve fornecer como troco. Imprima também o valor da compra, o valor do troco e a quantidade de cada tipo de nota a ser fornecido como troco. Suponha que o sistema monetário não utilize centavos.
+
+var valorCompra = parseInt(prompt("Digite o valor da compra"))
+var valorPago = parseInt(prompt("Digite o valor pago pelo cliente"))
+
+var troco = valorPago - valorCompra
+
+document.write("Valor da compra R$ " + valorCompra + "<br>")
+document.write("Valor pago pelo cliente R$ " + valorPago + "<br>")
+document.write("Troco R$ " + troco + "<br>")
+
+var nota100 = Math.floor(troco / 100);
+var nota10 = Math.floor(troco / 10);
+var nota1 = troco
+
+document.write("Quantidade mínima de notas utilizadas para o troco" + "<br>")
+document.write("Notas de 100 = " + nota100 + "<br>")
+document.write("Notas de 10 = " + nota10 + "<br>")
+document.write("Notas de 1 = " + nota1 + "<br>")
+
+    </script>
+</body>
+</html>

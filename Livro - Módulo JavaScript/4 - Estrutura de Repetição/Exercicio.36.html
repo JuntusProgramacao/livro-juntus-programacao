@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 36</title>
+</head>
+<body>
+    <script>
+//Faça um algoritmo que leia o nome, salário e número de filhos de 100 pessoas, e calcule: 
+//O salário médio das pessoas que possuam 2 filhos 
+//O salário médio das que não possuem filhos 
+//Qual a média salarial maior, entre os que têm um e dois filhos 
+//O salário médio geral 
+
+var totalPessoas = 100
+var totalFilhosDois = 0
+var totalFilhosZero = 0
+var totalFilhosUmDois = 0
+var totalSalarioDoisFilhos = 0
+var totalSalarioZeroFilhos = 0
+var totalSalarioUmDoisFilhos = 0
+var totalSalarioGeral = 0
+
+    for (var i = 1; i <= totalPessoas; i++) {
+      document.write("Pessoa " + i)
+
+      var nome = prompt("Digite o nome da pessoa")
+      var salario = parseFloat(prompt("Digite o salário da pessoa (em reais)"))
+      var numeroFilhos = parseInt(prompt("Digite o número de filhos da pessoa"))
+
+      totalSalarioGeral += salario
+
+      if (numeroFilhos === 2) {
+        totalFilhosDois++
+        totalSalarioDoisFilhos += salario
+      } else if (numeroFilhos === 0) {
+        totalFilhosZero++
+        totalSalarioZeroFilhos += salario
+      } else if (numeroFilhos === 1) {
+        totalFilhosUmDois++
+        totalSalarioUmDoisFilhos += salario
+      }
+    }
+
+    var mediaSalarioDoisFilhos = totalFilhosDois > 0 ? totalSalarioDoisFilhos / totalFilhosDois : 0
+    var mediaSalarioZeroFilhos = totalFilhosZero > 0 ? totalSalarioZeroFilhos / totalFilhosZero : 0
+    var mediaSalarioUmDoisFilhos = totalFilhosUmDois > 0 ? totalSalarioUmDoisFilhos / totalFilhosUmDois : 0
+    var mediaSalarioGeral = totalSalarioGeral / totalPessoas
+
+    document.write("Resultados" + "<br>")
+    document.write("Salário médio das pessoas que possuem 2 filhos: R$ " + mediaSalarioDoisFilhos.toFixed(2) + "<br>")
+    document.write("Salário médio das pessoas que não possuem filhos: R$ " + mediaSalarioZeroFilhos.toFixed(2) + "<br>")
+    document.write("Média salarial maior entre os que têm um e dois filhos: R$ " + Math.max(mediaSalarioUmDoisFilhos, mediaSalarioDoisFilhos).toFixed(2) + "<br>")
+    document.write("Salário médio geral: R$ " + mediaSalarioGeral.toFixed(2) + "<br>")
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 5</title>
+</head>
+<body>
+    <script>
+// Faça um algoritmo que imprima todos os números de 1 até um número especificado pelo usuário e a soma deles
+
+var numero = parseInt(prompt("Digite um número maior que 1"))
+
+    if(isNaN(numero)){
+        document.write("Por favor, insira um número válido, maior que 1")
+    }else{
+        var soma = 0
+
+        for(var i = 1; 1<= numero; i++){
+            document.write(i + "<br>")
+            soma += i
+        }
+
+        document.write(`A soma dos números de 1 até  ${numero} é: ${soma}`)
+    }
+
+    </script>
+</body>
+</html>

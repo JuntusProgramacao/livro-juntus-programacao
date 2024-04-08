@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 19</title>
+</head>
+<body>
+    <script>
+    //  O comerciante, ainda não satisfeito, solicitou à empresa de informática responsável pelos programas em sua loja, um programa que permite saber o lucro médio obtido quando acontece a compra por um cliente. Para isso, será necessário saber quantos produtos de cada tipo foi comprado pelo cliente, e fazer a média dos lucros em porcentagem   
+
+function calcularLucroMedio(produtos) {
+    var totalProdutos = 0;
+    var totalLucro = 0;
+
+    for (var produto in produtos) {
+        var quantidade = parseInt(prompt(`Informe a quantidade de ${produto}s comprados:`));
+        var custo = parseFloat(prompt(`Informe o custo unitário do ${produto}:`));
+        var precoVenda = parseFloat(prompt(`Informe o preço de venda unitário do ${produto}:`));
+
+        var lucroUnitario = (precoVenda - custo) / custo * 100;
+        var lucroTotal = lucroUnitario * quantidade;
+
+        totalProdutos += quantidade;
+        totalLucro += lucroTotal;
+    }
+
+    var lucroMedio = totalLucro / totalProdutos;
+
+    return `O lucro médio obtido na compra é de ${lucroMedio.toFixed(2)}%`;
+}
+
+var produtos = {
+    'produto1': 'Descrição do Produto 1',
+    'produto2': 'Descrição do Produto 2',
+    'produto3': 'Descrição do Produto 3'
+};
+
+document.write(calcularLucroMedio(produtos));
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 24</title>
+</head>
+<body>
+    <script>
+// Será digitado uma série de números inteiros. Faça um algoritmo para calcular e imprimir o produto desses valores, isto é, o resultado da multiplicação de todos os números. Número de entrada desconhecido
+
+var soma = 1
+
+while (true) {
+    var entrada = parseInt(prompt("Digite um número inteiro (ou pressione 0 para encerrar)"))
+
+    if (entrada === 0) {
+        break
+    }
+
+    soma *= entrada
+    document.write(`Resultado: ${soma}` + `<br>`)
+}
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 35</title>
+</head>
+<body>
+    <script>
+        // Escrever um algoritmo que um número indefinido de valores, para cada entrada de dados a entrada de 2 valores, o primeiro representando o número de um aluno, e o segundo representando a sua altura em centímetros. Encontre o aluno mais alto e o mais baixo. Mostre o número do aluno mais alto e do mais baixo, junto com suas alturas. 
+
+var alunoMaisAlto = 0
+var alturaMaisAlto = 0
+var alunoMaisBaixo = 0
+var alturaMaisBaixo = Infinity
+
+    var continuar = true
+
+    while (continuar) {
+      try {
+        var numeroAluno = parseInt(prompt("Digite o número do aluno (ou clique em Cancelar para encerrar)"))
+
+        if (isNaN(numeroAluno) || numeroAluno === null) {
+          continuar = false
+          continue
+        }
+
+        var altura = parseFloat(prompt("Digite a altura do aluno em centímetros"))
+
+        if (isNaN(altura)) {
+          alert("Altura inválida. Por favor, digite um número.")
+          continue
+        }
+
+        if (altura > alturaMaisAlto) {
+          alturaMaisAlto = altura
+          alunoMaisAlto = numeroAluno
+        }
+
+        if (altura < alturaMaisBaixo) {
+          alturaMaisBaixo = altura
+          alunoMaisBaixo = numeroAluno
+        }
+
+      } catch (error) {
+        alert("Erro na entrada. Por favor, tente novamente.")
+      }
+    }
+
+    document.write("Resultados" + "<br>")
+    document.write("Aluno mais alto" + "<br>")
+    document.write("Número do aluno: " + alunoMaisAlto + "<br>")
+    document.write("Altura: " + alturaMaisAlto + " centímetros" + "<br>")
+
+    document.write("Aluno mais baixo" + "<br>")
+    document.write("Número do aluno: " + alunoMaisBaixo + "<br>")
+    document.write("<p>Altura: " + alturaMaisBaixo + " centímetros" + "<br>")
+    </script>
+</body>
+</html>

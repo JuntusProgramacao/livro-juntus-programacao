@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 26</title>
+</head>
+<body>
+    <script>
+// Elabore um algoritmo para gerar uma tabela de conversão entre milhas e Km, iniciando em 0 Km e finalizado em 1000 Km, e varie de 100 Km em 100 Km, sabendo-se que: 1 Milha = 1852 m
+
+function TabelaConversao() {
+    const milhaParaMetro = 1852
+    const inicioKm = 0
+    const finalKm = 1000
+    const variacaoKm = 100
+
+    document.write("<table border='1'>")
+    document.write("<tr><th>Kilômetros</th><th>Milhas</th></tr>")
+
+    for (let km = inicioKm; km <= finalKm; km += variacaoKm) {
+        const milhas = km / milhaParaMetro
+
+        document.write(`<tr><td>${km}</td><td>${milhas.toFixed(2)}</td></tr>`)
+    }
+
+    document.write("</table>")
+}
+
+TabelaConversao()
+
+
+    </script>
+</body>
+</html>

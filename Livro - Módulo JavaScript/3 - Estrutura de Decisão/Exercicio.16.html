@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 16</title>
+</head>
+<body>
+    <script>
+//Uma empresa de modelo está contratando garotas para iniciar um trabalho de divulgação de produtos de beleza. Para isso, está selecionando garotas que tenham o seguinte perfil: (L2 – ex.14) 
+// a. Idade superior a 18 anos 
+// b. Cabelos loiros 
+// c. Altura superior a 1,75 m 
+// d. Peso inferior a 60 kg 
+// e. Seios: 85 a 87 cm 
+// f. Cintura: 60 cm 
+// g. Olhos verdes 
+// h. Quadril: 60 cm 
+
+// Você foi escalado por sua empresa para elaborar um algoritmo que permite entrar com os valores referentes às características acima e, informar se a garota foi selecionada ou não
+
+function verificarSelecao(garota) {
+    if (
+        garota.idade > 18 &&
+        garota.cabelo.toLowerCase() === 'loiro' &&
+        garota.altura > 1.75 &&
+        garota.peso < 60 &&
+        garota.seios >= 85 && garota.seios <= 87 &&
+        garota.cintura === 60 &&
+        garota.olhos.toLowerCase() === 'verdes' &&
+        garota.quadril === 60
+    ) {
+        return "Parabéns! A garota foi selecionada.";
+    } else {
+        return "Desculpe, a garota não atende aos critérios de seleção.";
+    }
+}
+
+var garota = {
+    idade: parseInt(prompt("Digite a idade da garota:")),
+    cabelo: prompt("Digite a cor do cabelo da garota:"),
+    altura: parseFloat(prompt("Digite a altura da garota em metros:")),
+    peso: parseFloat(prompt("Digite o peso da garota em kg:")),
+    seios: parseFloat(prompt("Digite a medida dos seios da garota em cm:")),
+    cintura: parseFloat(prompt("Digite a medida da cintura da garota em cm:")),
+    olhos: prompt("Digite a cor dos olhos da garota:"),
+    quadril: parseFloat(prompt("Digite a medida do quadril da garota em cm:"))
+};
+
+document.write(verificarSelecao(garota));
+
+    </script>
+</body>
+</html>

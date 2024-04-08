@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 12</title>
+</head>
+<body>
+    <script>
+        //Faça um algoritmo para calcular a conta de energia elétrica de uma casa. O valor de cada KWH é 1.5. Quando a casa é de uma aposentada, a conta tem um desconto de 15%
+
+        function calcularContaEnergia(kwhConsumido, Aposentado) {
+        var valorPorKWH = 1.5
+        var totalConta = kwhConsumido * valorPorKWH
+
+  if (Aposentado) {
+    var desconto = 0.15
+    totalConta -= totalConta * desconto
+  }
+  return totalConta
+}
+var kwhConsumido = parseFloat(prompt("Informe a quantidade de KWH consumidos:"));
+var Aposentado = confirm("A pessoa é aposentada?")
+
+if (isNaN(kwhConsumido) || kwhConsumido < 0) {
+  console.error("Por favor, informe um valor válido para o consumo em KWH.")
+} else {
+  var contaEnergia = calcularContaEnergia(kwhConsumido, Aposentado);
+  document.write(`A conta de energia é: R$ ${contaEnergia.toFixed(2)}`)
+}
+//neste exemplo os botões de "Sim" e "Não" irão aparecer como "OK" e "Cancelar" - para alterar o que aparece na caixa de texto, seria necessário programação em html, não é o foco.
+        
+    </script>
+</body>
+</html>

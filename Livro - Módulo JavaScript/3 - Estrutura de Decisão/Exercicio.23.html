@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 23</title>
+</head>
+<body>
+    <script>
+        // Faça um algoritmo para determinar o maior e o menor de quatro números lidos
+
+    var n1 = parseFloat(prompt("Digite o primeiro número"))
+    var n2 = parseFloat(prompt("Digite o segundo número"))
+    var n3 = parseFloat(prompt("Digite o terceiro número"))
+    var n4 = parseFloat(prompt("Digite o quarto número"))
+
+    var maior = n1
+    var menor = n1
+    
+    if(n2 > maior){
+        maior = n2
+    }if(n3 > maior){
+        maior = n3
+    }if(n4 > maior){
+        maior = n4
+    }
+
+    if(n2 < menor){
+        menor = n2
+    }if(n3 < menor){
+        menor = n3
+    }if(n4 < menor){
+        menor = n4
+    }
+
+    document.write("O maior número é " + maior + "<br>")
+    document.write("O menor número é " + menor)
+    </script>
+</body>
+</html>
