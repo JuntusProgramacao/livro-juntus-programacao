@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 21</title>
+</head>
+<body>
+    <script>
+//         Você foi encarregado de desenvolver o modulo de cálculo de passagens de uma empresa de ônibus. O funcionamento do algoritmo deve ser o seguinte: (L1 – ex.19) 
+// - Peça o destino do passageiro; 
+// - Peça a distância ao destino (em quilômetros); 
+// - Peça o número de pedágios no caminho; 
+// - Calcule o acréscimo de R$ 2,00 de tarifa de embarque; 
+// - Calcule acréscimo de R$ 0,45 por quilometro rodado; 
+// - Calcule acréscimo de R$ 9,00 por pedágio no caminho; 
+// - Calcule um acréscimo de 80% sobre o resultado até agora calculado (este será 		o preço da passagem); 
+// - Informe o valor da passagem para o passageiro com a seguinte frase: 
+// “Passageiro, a passagem custa: ......”. 
+
+var destino = prompt("Digite seu destino")
+var distKM = parseFloat(prompt("Digite a distancia em KM"))
+var pedagio = parseInt(prompt("Digite a quantidade de pedágios"))
+var contaPassagem = 2.00 + (distKM * 0.45) + (pedagio * 9.00)
+var valorPassagem = contaPassagem * 1.8
+
+document.write(`Sua passagem para ${destino} custa R$ ${valorPassagem}`)
+
+    </script>
+</body>
+</html>

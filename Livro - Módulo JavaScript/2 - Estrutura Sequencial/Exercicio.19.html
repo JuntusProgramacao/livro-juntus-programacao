@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 19</title>
+</head>
+<body>
+    <script>
+//Você foi contratado por uma empresa de construção para fazer um programa que calcule o
+// salário líquido dos operários no fim de cada mês. Sabe-se que cada operário recebe R$ 3,00
+// por cada hora trabalhada, e que se desconta 8% do salário bruto para INSS. 
+
+var horasTrab = parseFloat(prompt("DIgite o total de horas trabalhadas"))
+var salBruto = horasTrab * 3.00
+var inss = salBruto * 0.08
+var salLiq = salBruto - inss
+
+document.write("Salário Líquido R$" + salLiq + "<br>")
+document.write("Salário Bruto R$ " + salBruto + "<br>")
+document.write("Desconto do INSS R$ " + inss)
+    </script>
+</body>
+</html>

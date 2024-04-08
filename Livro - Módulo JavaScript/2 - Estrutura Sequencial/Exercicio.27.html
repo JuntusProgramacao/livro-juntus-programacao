@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 27</title>
+</head>
+<body>
+    <script>
+//A Empresa ABC produz 3 tipos de peças mecânicas: parafusos, porcas e arruelas. Sabe-se que é dado desconto de 10% sobre as porcas vendidas,
+// de 20% sobre as arruelas vendidas e de 30% sobre os parafusos vendidos. O algoritmo deve receber os seguintes dados: 
+// - nome do cliente; 
+// - preço unitário da porca, arruela e parafuso; 
+// - quantidade de porcas, arruelas e parafusos solicitados pelo cliente.
+//Por fim, deve-se imprimir os seguintes dados:
+// - nome do cliente; 
+// - número de porcas, arruelas e parafusos comprados; 
+// - total pago pelas porcas, arruelas e parafusos; 
+// - total de desconto dado ao cliente; 
+// - total a ser pago pelo cliente. 
+
+var nome = prompt("DIgite o nome do cliente: ")
+
+var precoPorca = parseFloat(prompt("Digite o preço unitário de cada porca"))
+var precoArruela = parseFloat(prompt("Digite o preço unitário de cada arruela"))
+var precoParafuso = parseFloat(prompt("Digite o preço unitário de cada parafuso"))
+
+var qtdPorca = parseInt(prompt("Digite a quantidade de porcas"))
+var qtdArruela = parseInt(prompt("Digite a quantidade de arruelas"))
+var qtdParafuso = parseInt(prompt("Digite a quantidade de parafusos"))
+
+var totalPorcas = precoPorca * qtdPorca
+var totalArruela = precoArruela * qtdArruela
+var totalParafuso = precoParafuso * qtdParafuso
+
+var descPorcas = totalPorcas * 0.1
+var descArruela = totalArruela * 0.2
+var descParafuso = totalParafuso * 0.3
+
+var totalDesc = descPorcas + descArruela + descParafuso
+var total = totalPorcas - descPorcas + totalArruela - descArruela + totalParafuso - descParafuso
+
+document.write("Nome do cliente: " + nome + "<br>")
+document.write("Quantidade de porcas compradas: " + qtdPorca + "<br>")
+document.write("Quantidade de arrulas compradas: " + qtdArruela + "<br>")
+document.write("Quantidade de parafusos compradas: " + qtdParafuso + "<br>")
+
+document.write("Total pago pelas porcas R$" + totalPorcas + "<br>")
+document.write("Total pago pelas arruelas R$" + totalArruela + "<br>")
+document.write("Total pago pelos parafusos R$" + totalParafuso + "<br>")
+
+document.write("Total de desconto dado ao cliente R$" + totalDesc + "<br>")
+document.write("Total ao ser pago pelo cliente R$" + total)
+    </script>
+</body>
+</html>

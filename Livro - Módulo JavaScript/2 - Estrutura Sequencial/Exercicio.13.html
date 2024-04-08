@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 13</title>
+</head>
+<body>
+    <script>
+//faça um algoritmo que:
+//peça o valor a prazo de um produto
+//peça a aliquota do desconto
+//calcule o preço a vista do produto
+
+var prodParc = parseFloat(prompt("Digite o valor do produto a prazo"))
+var aliquota = parseFloat(prompt("Digite o valor da aliquota"))
+var porcentagem = prodParc * (aliquota / 100)
+var precoFinal = prodParc - porcentagem
+
+document.write("O preço a vista do produto é R$" + precoFinal)
+    </script>
+</body>
+</html>

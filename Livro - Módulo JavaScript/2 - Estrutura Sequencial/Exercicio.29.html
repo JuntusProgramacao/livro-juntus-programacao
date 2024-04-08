@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 29</title>
+</head>
+<body>
+    <script>
+//Faça um algoritmo que leia o ano de nascimento de uma pessoa e o ano atual, calcule e mostre: 
+// - A idade dessa pessoa em anos; 
+// - A idade dessa pessoa em meses; 
+// - A idade dessa pessoa em dias; 
+// - A idade dessa pessoa em semanas.
+
+var anoNasc = parseInt(prompt("Digite seu ano de nascimento"))
+var anoAtual = parseInt(prompt("Digite o ano atual"))
+
+var idadeAnos = anoAtual - anoNasc
+var idadeMeses = idadeAnos * 12
+var idadeDias = idadeAnos * 365
+var idadeSemanas = idadeDias / 7
+
+document.write("A idade em anos é " + idadeAnos + " anos <br>")
+document.write("A idade em meses é " + idadeMeses + " meses <br>")
+document.write("A idade em dias é " + idadeDias + " dias <br>")
+document.write("A idade em semanas é " + idadeSemanas + " semanas")
+
+    </script>
+</body>
+</html>

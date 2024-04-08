@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 14</title>
+</head>
+<body>
+    <script>
+//Desenvolva um programa para calcular o salário líquido de um funcionário. O programa deve:
+//calcular o valor do IR com aliquota de 10%
+//calcular o valor do INSS com aliquota de 5%
+//calcular o salário liquido do funcionário
+
+var salBruto = parseFloat(prompt("Digite o valor do salário bruto"))
+var ir = salBruto * 0.10
+var inss = salBruto * 0.05
+var salLiqui = salBruto - ir - inss
+
+document.write("O salário líquido é R$ " + salLiqui)
+    </script>
+</body>
+</html>

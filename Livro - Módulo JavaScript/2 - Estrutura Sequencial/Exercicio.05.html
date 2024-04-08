@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 5</title>
+</head>
+<body>
+    <script>
+//Faça um algoritmo que leia duas notas, calcule e mostre a média ponderada dessas notas, sabedo que os pesos devem ser dados pelo usuário.
+
+var nota1 = parseFloat(prompt("Digite a nota 1: "))
+var peso1 = parseFloat(prompt("Digite o peso da nota 1: "))
+var nota2 = parseFloat(prompt("Digite a nota 2: "))
+var peso2 = parseFloat(prompt("Digite o peso da nota 2: "))
+
+var media = ((nota1 * peso1) + (nota2 * peso2)) / (peso1 + peso2)
+
+document.write("Sua nota é: " + media)
+    </script>
+</body>
+</html>
