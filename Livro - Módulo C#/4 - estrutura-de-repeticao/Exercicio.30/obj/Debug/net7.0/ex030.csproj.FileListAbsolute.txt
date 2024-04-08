@@ -1,0 +1,29 @@
+D:\Livro Algoritmos\resolucoes\lista03\ex030\bin\Debug\net7.0\ex030.exe
+D:\Livro Algoritmos\resolucoes\lista03\ex030\bin\Debug\net7.0\ex030.deps.json
+D:\Livro Algoritmos\resolucoes\lista03\ex030\bin\Debug\net7.0\ex030.runtimeconfig.json
+D:\Livro Algoritmos\resolucoes\lista03\ex030\bin\Debug\net7.0\ex030.dll
+D:\Livro Algoritmos\resolucoes\lista03\ex030\bin\Debug\net7.0\ex030.pdb
+D:\Livro Algoritmos\resolucoes\lista03\ex030\obj\Debug\net7.0\ex030.csproj.AssemblyReference.cache
+D:\Livro Algoritmos\resolucoes\lista03\ex030\obj\Debug\net7.0\ex030.GeneratedMSBuildEditorConfig.editorconfig
+D:\Livro Algoritmos\resolucoes\lista03\ex030\obj\Debug\net7.0\ex030.AssemblyInfoInputs.cache
+D:\Livro Algoritmos\resolucoes\lista03\ex030\obj\Debug\net7.0\ex030.AssemblyInfo.cs
+D:\Livro Algoritmos\resolucoes\lista03\ex030\obj\Debug\net7.0\ex030.csproj.CoreCompileInputs.cache
+D:\Livro Algoritmos\resolucoes\lista03\ex030\obj\Debug\net7.0\ex030.dll
+D:\Livro Algoritmos\resolucoes\lista03\ex030\obj\Debug\net7.0\refint\ex030.dll
+D:\Livro Algoritmos\resolucoes\lista03\ex030\obj\Debug\net7.0\ex030.pdb
+D:\Livro Algoritmos\resolucoes\lista03\ex030\obj\Debug\net7.0\ex030.genruntimeconfig.cache
+D:\Livro Algoritmos\resolucoes\lista03\ex030\obj\Debug\net7.0\ref\ex030.dll
+C:\Users\Gabriela\Documents\Livro\Códigos do Livro\Livro - Módulo C#\C#\5 - estrutura-de-repeticao\5.30\bin\Debug\net7.0\ex030.exe
+C:\Users\Gabriela\Documents\Livro\Códigos do Livro\Livro - Módulo C#\C#\5 - estrutura-de-repeticao\5.30\bin\Debug\net7.0\ex030.deps.json
+C:\Users\Gabriela\Documents\Livro\Códigos do Livro\Livro - Módulo C#\C#\5 - estrutura-de-repeticao\5.30\bin\Debug\net7.0\ex030.runtimeconfig.json
+C:\Users\Gabriela\Documents\Livro\Códigos do Livro\Livro - Módulo C#\C#\5 - estrutura-de-repeticao\5.30\bin\Debug\net7.0\ex030.dll
+C:\Users\Gabriela\Documents\Livro\Códigos do Livro\Livro - Módulo C#\C#\5 - estrutura-de-repeticao\5.30\bin\Debug\net7.0\ex030.pdb
+C:\Users\Gabriela\Documents\Livro\Códigos do Livro\Livro - Módulo C#\C#\5 - estrutura-de-repeticao\5.30\obj\Debug\net7.0\ex030.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Gabriela\Documents\Livro\Códigos do Livro\Livro - Módulo C#\C#\5 - estrutura-de-repeticao\5.30\obj\Debug\net7.0\ex030.AssemblyInfoInputs.cache
+C:\Users\Gabriela\Documents\Livro\Códigos do Livro\Livro - Módulo C#\C#\5 - estrutura-de-repeticao\5.30\obj\Debug\net7.0\ex030.AssemblyInfo.cs
+C:\Users\Gabriela\Documents\Livro\Códigos do Livro\Livro - Módulo C#\C#\5 - estrutura-de-repeticao\5.30\obj\Debug\net7.0\ex030.csproj.CoreCompileInputs.cache
+C:\Users\Gabriela\Documents\Livro\Códigos do Livro\Livro - Módulo C#\C#\5 - estrutura-de-repeticao\5.30\obj\Debug\net7.0\ex030.dll
+C:\Users\Gabriela\Documents\Livro\Códigos do Livro\Livro - Módulo C#\C#\5 - estrutura-de-repeticao\5.30\obj\Debug\net7.0\refint\ex030.dll
+C:\Users\Gabriela\Documents\Livro\Códigos do Livro\Livro - Módulo C#\C#\5 - estrutura-de-repeticao\5.30\obj\Debug\net7.0\ex030.pdb
+C:\Users\Gabriela\Documents\Livro\Códigos do Livro\Livro - Módulo C#\C#\5 - estrutura-de-repeticao\5.30\obj\Debug\net7.0\ex030.genruntimeconfig.cache
+C:\Users\Gabriela\Documents\Livro\Códigos do Livro\Livro - Módulo C#\C#\5 - estrutura-de-repeticao\5.30\obj\Debug\net7.0\ref\ex030.dll
